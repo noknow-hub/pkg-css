@@ -4,10 +4,10 @@
     "url": "https://github.com/noknow-hub/pkg-web-design/issues"
   },
   "description": "Common style.",
-  "homepage": "https://github.com/noknow-hub/pkg-web-design/common-style#readme",
+  "homepage": "https://github.com/noknow-hub/pkg-web-design/blob/main/common-style#readme",
   "license": "MIT",
   "main": "index.js",
-  "name": "@noknow/common-style",
+  "name": "@noknow/web-design-common-style",
   "publishConfig": {
     "access": "public"
   },

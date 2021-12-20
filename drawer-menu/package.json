@@ -3,11 +3,11 @@
   "bugs": {
     "url": "https://github.com/noknow-hub/pkg-javascript/issues"
   },
-  "description": "HTTP User Agent detector.",
-  "homepage": "https://github.com/noknow-hub/pkg-javascript/drawer-menu#readme",
+  "description": "Drawer menu",
+  "homepage": "https://github.com/noknow-hub/pkg-web-design/blob/main/drawer-menu#readme",
   "license": "MIT",
   "main": "index.js",
-  "name": "@noknow/drawer-menu",
+  "name": "@noknow/web-design-drawer-menu",
   "publishConfig": {
     "access": "public"
   },
@@ -20,5 +20,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module",
-  "version": "0.1.0"
+  "version": "0.1.2"
 }
