@@ -1,19 +1,19 @@
 {
   "author": "noknow",
   "bugs": {
-    "url": "https://github.com/noknow-hub/pkg-web-design/issues"
+    "url": "https://github.com/noknow-hub/pkg-css/issues"
   },
   "description": "Common style.",
-  "homepage": "https://github.com/noknow-hub/pkg-web-design/blob/main/common-style#readme",
+  "homepage": "https://github.com/noknow-hub/pkg-css/blob/main/css-main#readme",
   "license": "MIT",
   "main": "index.js",
-  "name": "@noknow/web-design-common-style",
+  "name": "@noknow/css-main",
   "publishConfig": {
     "access": "public"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/noknow-hub/pkg-web-design.git",
+    "url": "git+https://github.com/noknow-hub/pkg-css.git",
     "directory": "common-style"
   },
   "scripts": {
