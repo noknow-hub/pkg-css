@@ -4,7 +4,7 @@
     "url": "https://github.com/noknow-hub/pkg-css/issues"
   },
   "description": "Common style.",
-  "homepage": "https://github.com/noknow-hub/pkg-css/blob/main/css-main#readme",
+  "homepage": "https://github.com/noknow-hub/pkg-css/blob/main/main#readme",
   "license": "MIT",
   "main": "index.js",
   "name": "@noknow/css-main",
@@ -14,11 +14,11 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/noknow-hub/pkg-css.git",
-    "directory": "common-style"
+    "directory": "main"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module",
-  "version": "0.1.0"
+  "version": "0.1.1"
 }
