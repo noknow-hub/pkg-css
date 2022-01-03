@@ -3,22 +3,22 @@
   "bugs": {
     "url": "https://github.com/noknow-hub/pkg-css/issues"
   },
-  "description": "Common style.",
-  "homepage": "https://github.com/noknow-hub/pkg-css/blob/main/main#readme",
+  "description": "Flat design.",
+  "homepage": "https://github.com/noknow-hub/pkg-css/blob/main/flat#readme",
   "license": "MIT",
   "main": "index.js",
-  "name": "@noknow/css-main",
+  "name": "@noknow/css-flat",
   "publishConfig": {
     "access": "public"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/noknow-hub/pkg-css.git",
-    "directory": "main"
+    "directory": "flat"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module",
-  "version": "0.1.3"
+  "version": "0.1.1"
 }
