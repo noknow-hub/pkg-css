@@ -98,27 +98,10 @@ table {
 
 
 /**********************************************************************
- .nkw.html
-**********************************************************************/
-.nkw.html {
-    font-size: var(--nkw-font-size-s);
-}
-@media screen and (min-width: 768px) {
-    .nkw.html {
-        font-size: var(--nkw-font-size-m);
-    }
-}
-@media screen and (min-width: 1024px) {
-    .nkw.html {
-        font-size: var(--nkw-font-size-l);
-    }
-}
-
-
-/**********************************************************************
  body
 **********************************************************************/
 .nkw.body {
+    font-size: var(--nkw-font-size-s);
     line-height: var(--nkw-line-height-s);
     margin: 0;
     position: relative;
@@ -126,11 +109,13 @@ table {
 }
 @media screen and (min-width: 768px) {
     .nkw.body {
+        font-size: var(--nkw-font-size-m);
         line-height: var(--nkw-line-height-m);
     }
 }
 @media screen and (min-width: 1024px) {
     .nkw.body {
+        font-size: var(--nkw-font-size-l);
         line-height: var(--nkw-line-height-l);
     }
 }

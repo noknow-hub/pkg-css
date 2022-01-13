@@ -3,22 +3,22 @@
   "bugs": {
     "url": "https://github.com/noknow-hub/pkg-css/issues"
   },
-  "description": "Common style.",
-  "homepage": "https://github.com/noknow-hub/pkg-css/blob/main/main#readme",
+  "description": "CSS utilities",
+  "homepage": "https://github.com/noknow-hub/pkg-css/blob/noknow#readme",
   "license": "MIT",
   "main": "index.js",
-  "name": "@noknow/css-main",
+  "name": "@noknow/css-noknow",
   "publishConfig": {
     "access": "public"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/noknow-hub/pkg-css.git",
-    "directory": "main"
+    "directory": "noknow"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module",
-  "version": "0.1.4"
+  "version": "0.1.0"
 }

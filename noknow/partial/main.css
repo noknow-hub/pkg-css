@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+:root {
+    --nkw-border-radius: 7px;
+    --nkw-color-success: #28a745;
+    --nkw-color-error: #dc3545;
+    --nkw-color-warning: #ffc107;
+    --nkw-color-info: #17a2b8;
+    --nkw-color-light: #e8eaed;
+    --nkw-color-link: #007bff;
+    --nkw-color-muted: #6c757d;
+    --nkw-color-note: #e66572;
+    --nkw-color-add: #28a745;
+    --nkw-color-update: #ffc107;
+    --nkw-color-delete: #dc3545;
+    --nkw-font-size: 16px;
+    --nkw-font-size-xxs: 10px;
+    --nkw-font-size-xs: 12px;
+    --nkw-font-size-s: 14px;
+    --nkw-font-size-m: 16px;
+    --nkw-font-size-l: 18px;
+    --nkw-font-size-xl: 20px;
+    --nkw-font-size-xxl: 22px;
+    --nkw-header-height: 50px;
+    --nkw-h1-font-size: 2.0rem;
+    --nkw-h2-font-size: 1.75rem;
+    --nkw-h3-font-size: 1.5rem;
+    --nkw-h4-font-size: 1.375rem;
+    --nkw-h5-font-size: 1.25rem;
+    --nkw-h6-font-size: 1.125rem;
+    --nkw-icon-size-s: 16px;
+    --nkw-icon-size-m: 24px;
+    --nkw-icon-size-l: 32px;
+    --nkw-line-height: 1.5;
+    --nkw-line-height-s: 1.5;
+    --nkw-line-height-m: 1.75;
+    --nkw-line-height-l: 2.0;
+    --nkw-p-font-size: 1.0rem;
+    --nkw-sidemenu-font-size-list-title: 0.9rem;
+    --nkw-sidemenu-font-size-list-item: 0.8rem;
+    --nkw-sidemenu-height: 36px;
+    --nkw-sidemenu-background-color-hover-item: #e8e8e8;
+    --nkw-sidemenu-border-sub-list: 3px solid #6c757d;
+    --nkw-layout-two-cols-width-sp-side: 90%;
+    --nkw-layout-two-cols-width-side: 260px;
+    --nkw-layout-two-cols-width-wide-side: 360px;
+    --nkw-layout-two-cols-item-icon-size: 24px;
+    --nkw-form-t1-background-color: #fff;
+    --nkw-form-t1-border-color: #e8eaed;
+    --nkw-form-t1-border-color-focus: #5f6368;
+    --nkw-form-t1-color: #495057;
+    --nkw-form-t1-font-size: 15px;
+    --nkw-form-t1-font-size-label: 12px;
+    --nkw-form-t1-height-icon: 22px;
+    --nkw-form-t1-width-icon: 22px;
+}
+@media screen and (min-width: 600px) {
+
+}
+@media screen and (min-width: 768px) {
+
+}
+@media screen and (min-width: 896px) {
+
+}
+@media screen and (min-width: 1024px) {
+
+}
+@media screen and (min-width: 1200px) {
+
+}
+
+
+
+/**********************************************************************
+ body
+**********************************************************************/
+.nkw.body {
+    font-size: var(--nkw-font-size);
+    line-height: var(--nkw-line-height);
+    margin: 0;
+    position: relative;
+    width: 100%;
+}
+@media screen and (min-width: 600px) {
+    .nkw.body {
+        font-size: calc(var(--nkw-font-size) + 1px);
+        line-height: calc(var(--nkw-line-height) + 0.1);
+    }
+}
+@media screen and (min-width: 768px) {
+    .nkw.body {
+        font-size: calc(var(--nkw-font-size) + 2px);
+        line-height: calc(var(--nkw-line-height) + 0.2);
+    }
+}
+@media screen and (min-width: 896px) {
+    .nkw.body {
+        font-size: calc(var(--nkw-font-size) + 3px);
+        line-height: calc(var(--nkw-line-height) + 0.3);
+    }   
+} 
+@media screen and (min-width: 1024px) {
+    .nkw.body {
+        font-size: calc(var(--nkw-font-size) + 4px);
+        line-height: calc(var(--nkw-line-height) + 0.4);
+    }
+}
+@media screen and (min-width: 1200px) {
+    .nkw.body {
+        font-size: calc(var(--nkw-font-size) + 5px);
+        line-height: calc(var(--nkw-line-height) + 0.5);
+    }
+}
+
+
+
