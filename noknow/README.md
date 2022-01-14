@@ -1,9 +1,9 @@
-# noknow-css-main
+# noknow-css
 
 ## Install
 
 ```console
-npm i @noknow/css-main
+npm i @noknow/css
 ```
 
 

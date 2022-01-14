@@ -54,22 +54,6 @@
     --nkw-form-t1-height-icon: 22px;
     --nkw-form-t1-width-icon: 22px;
 }
-@media screen and (min-width: 600px) {
-
-}
-@media screen and (min-width: 768px) {
-
-}
-@media screen and (min-width: 896px) {
-
-}
-@media screen and (min-width: 1024px) {
-
-}
-@media screen and (min-width: 1200px) {
-
-}
-
 
 
 /**********************************************************************
@@ -112,6 +96,224 @@
         line-height: calc(var(--nkw-line-height) + 0.5);
     }
 }
+
+
+/**********************************************************************
+ h1 - h6
+**********************************************************************/
+.nkw.h1 {
+    font-size: var(--nkw-h1-font-size);
+    margin: 50px 0;
+}
+@media screen and (min-width: 600px) {
+    font-size: calc(var(--nkw-h1-font-size) + 1px);
+}
+@media screen and (min-width: 768px) {
+    font-size: calc(var(--nkw-h1-font-size) + 2px);
+}
+@media screen and (min-width: 896px) {
+    font-size: calc(var(--nkw-h1-font-size) + 3px);
+}
+@media screen and (min-width: 1024px) {
+    font-size: calc(var(--nkw-h1-font-size) + 4px);
+}
+@media screen and (min-width: 1200px) {
+    font-size: calc(var(--nkw-h1-font-size) + 5px);
+}
+.nkw.h2 {
+    font-size: var(--nkw-h2-font-size);
+    margin: 40px 0 20px;
+}
+@media screen and (min-width: 600px) {
+    font-size: calc(var(--nkw-h2-font-size) + 1px);
+}
+@media screen and (min-width: 768px) {
+    font-size: calc(var(--nkw-h2-font-size) + 2px);
+}
+@media screen and (min-width: 896px) {
+    font-size: calc(var(--nkw-h2-font-size) + 3px);
+}
+@media screen and (min-width: 1024px) {
+    font-size: calc(var(--nkw-h2-font-size) + 4px);
+}
+@media screen and (min-width: 1200px) {
+    font-size: calc(var(--nkw-h2-font-size) + 5px);
+}
+.nkw.h3 {
+    font-size: var(--nkw-h3-font-size);
+    margin: 30px 0 20px;
+}
+@media screen and (min-width: 600px) {
+    font-size: calc(var(--nkw-h3-font-size) + 1px);
+}
+@media screen and (min-width: 768px) {
+    font-size: calc(var(--nkw-h3-font-size) + 2px);
+}
+@media screen and (min-width: 896px) {
+    font-size: calc(var(--nkw-h3-font-size) + 3px);
+}
+@media screen and (min-width: 1024px) {
+    font-size: calc(var(--nkw-h3-font-size) + 4px);
+}
+@media screen and (min-width: 1200px) {
+    font-size: calc(var(--nkw-h3-font-size) + 5px);
+}
+.nkw.h4 {
+    font-size: var(--nkw-h4-font-size);
+}
+@media screen and (min-width: 600px) {
+    font-size: calc(var(--nkw-h4-font-size) + 1px);
+}
+@media screen and (min-width: 768px) {
+    font-size: calc(var(--nkw-h4-font-size) + 2px);
+}
+@media screen and (min-width: 896px) {
+    font-size: calc(var(--nkw-h4-font-size) + 3px);
+}
+@media screen and (min-width: 1024px) {
+    font-size: calc(var(--nkw-h4-font-size) + 4px);
+}
+@media screen and (min-width: 1200px) {
+    font-size: calc(var(--nkw-h4-font-size) + 5px);
+}
+.nkw.h5 {
+    font-size: var(--nkw-h5-font-size);
+}
+@media screen and (min-width: 600px) {
+    font-size: calc(var(--nkw-h5-font-size) + 1px);
+}
+@media screen and (min-width: 768px) {
+    font-size: calc(var(--nkw-h5-font-size) + 2px);
+}
+@media screen and (min-width: 896px) {
+    font-size: calc(var(--nkw-h5-font-size) + 3px);
+}
+@media screen and (min-width: 1024px) {
+    font-size: calc(var(--nkw-h5-font-size) + 4px);
+}
+@media screen and (min-width: 1200px) {
+    font-size: calc(var(--nkw-h5-font-size) + 5px);
+}
+.nkw.h6 {
+    font-size: var(--nkw-h6-font-size);
+}
+@media screen and (min-width: 600px) {
+    font-size: calc(var(--nkw-h6-font-size) + 1px);
+}
+@media screen and (min-width: 768px) {
+    font-size: calc(var(--nkw-h6-font-size) + 2px);
+}
+@media screen and (min-width: 896px) {
+    font-size: calc(var(--nkw-h6-font-size) + 3px);
+}
+@media screen and (min-width: 1024px) {
+    font-size: calc(var(--nkw-h6-font-size) + 4px);
+}
+@media screen and (min-width: 1200px) {
+    font-size: calc(var(--nkw-h6-font-size) + 5px);
+}
+.nkw.h1, .nkw.h2, .nkw.h3, .nkw.h4, .nkw.h5, .nkw.h6 {
+    color: inherit;
+    font-weight: bold;
+    line-height: var(--nkw-line-height);
+}
+@media screen and (min-width: 600px) {
+    .nkw.h1, .nkw.h2, .nkw.h3, .nkw.h4, .nkw.h5, .nkw.h6 {
+        line-height: calc(var(--nkw-line-height) + 0.1);
+    }
+}
+@media screen and (min-width: 768px) {
+    .nkw.h1, .nkw.h2, .nkw.h3, .nkw.h4, .nkw.h5, .nkw.h6 {
+        line-height: calc(var(--nkw-line-height) + 0.2);
+    }
+}
+@media screen and (min-width: 896px) {
+    .nkw.h1, .nkw.h2, .nkw.h3, .nkw.h4, .nkw.h5, .nkw.h6 {
+        line-height: calc(var(--nkw-line-height) + 0.3);
+    }
+}
+@media screen and (min-width: 1024px) {
+    .nkw.h1, .nkw.h2, .nkw.h3, .nkw.h4, .nkw.h5, .nkw.h6 {
+        line-height: calc(var(--nkw-line-height) + 0.4);
+    }
+}
+@media screen and (min-width: 1200px) {
+    .nkw.h1, .nkw.h2, .nkw.h3, .nkw.h4, .nkw.h5, .nkw.h6 {
+        line-height: calc(var(--nkw-line-height) + 0.5);
+    }
+}
+
+
+/**********************************************************************
+ header
+**********************************************************************/
+.nkw.header {
+    -webkit-align-items: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    height: var(--nkw-header-height);
+}
+
+
+/**********************************************************************
+ section
+**********************************************************************/
+.nkw.section {
+    margin: 20px auto;
+    width: calc(100% - 40px);
+}
+
+/**********************************************************************
+ button
+**********************************************************************/
+.nkw.button-success {
+    background-color: var(--nkw-color-success) !important;
+    border: none !important;
+    box-sizing: border-box;
+    color: #fff !important;
+    fill: #fff !important;
+    font-size: inherit;
+    line-height: inherit;
+    padding: 10px;
+}
+.nkw.button-add {
+    background-color: var(--nkw-color-add) !important;
+    border: none !important;
+    box-sizing: border-box;
+    color: #fff !important;
+    fill: #fff !important;
+    font-size: inherit;
+    line-height: inherit;
+    padding: 10px;
+}
+.nkw.button-update {
+    background-color: var(--nkw-color-update) !important;
+    border: none !important;
+    box-sizing: border-box;
+    color: #fff !important;
+    fill: #fff !important;
+    font-size: inherit;
+    line-height: inherit;
+    padding: 10px;
+}
+.nkw.button-delete {
+    background-color: var(--nkw-color-delete) !important;
+    border: none !important;
+    box-sizing: border-box;
+    color: #fff !important;
+    fill: #fff !important;
+    font-size: inherit;
+    line-height: inherit;
+    padding: 10px;
+}
+[class*="nkw-button-"].round {
+    border-radius: var(--nkw-border-radius);
+}
+
 
 
 

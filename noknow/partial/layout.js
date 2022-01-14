@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+/**********************************************************************
+ .nkw.layout-two-cols
+**********************************************************************/
+.nkw.layout-two-cols {
+    display: -webkit-flex;
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+.nkw.layout-two-cols > .nkw.layout-two-cols-side {
+    box-sizing: border-box;
+    flex: 0 0 0;
+    max-height: calc(100vh - 50px);
+    overflow-y: scroll;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+}
+@media screen and (min-width: 1024px) {
+    .nkw.layout-two-cols > .nkw.layout-two-cols-side {
+        flex-basis: 260px;
+    }
+    .nkw.layout-two-cols.wide-side > .nkw.layout-two-cols-side {
+        flex-basis: 360px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .nkw.layout-two-cols.wide-side-1200 > .nkw.layout-two-cols-side {
+        flex-basis: 360px;
+    }
+}
+.nkw.layout-two-cols > .nkw.layout-two-cols-content {
+    flex: 1 1;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    z-index: 2;
+}
+
+
+/**********************************************************************
+ .nkw,row
+ .nkw.col-*
+**********************************************************************/
+.nkw.row {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.nkw.row.center {
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.nkw.col-1 { width: 8.33%; }
+.nkw.col-2 { width: 16.66%; }
+.nkw.col-3 { width: 25%; }
+.nkw.col-4 { width: 33.33%; }
+.nkw.col-5 { width: 41.66%; }
+.nkw.col-6 { width: 50%; }
+.nkw.col-7 { width: 58.33%; }
+.nkw.col-8 { width: 66.66%; }
+.nkw.col-9 { width: 75%; }
+.nkw.col-10 { width: 83.33%; }
+.nkw.col-11 { width: 91.66%; }
+.nkw.col-12 { width: 100%; }
+@media screen and (min-width: 600px) {
+    .nkw.col-1-600 { width: 8.33%; }
+    .nkw.col-2-600 { width: 16.66%; }
+    .nkw.col-3-600 { width: 25%; }
+    .nkw.col-4-600 { width: 33.33%; }
+    .nkw.col-5-600 { width: 41.66%; }
+    .nkw.col-6-600 { width: 50%; }
+    .nkw.col-7-600 { width: 58.33%; }
+    .nkw.col-8-600 { width: 66.66%; }
+    .nkw.col-9-600 { width: 75%; }
+    .nkw.col-10-600 { width: 83.33%; }
+    .nkw.col-11-600 { width: 91.66%; }
+    .nkw.col-12-600 { width: 100%; }
+}
+@media screen and (min-width: 768px) {
+    .nkw.col-1-768 { width: 8.33%; }
+    .nkw.col-2-768 { width: 16.66%; }
+    .nkw.col-3-768 { width: 25%; }
+    .nkw.col-4-768 { width: 33.33%; }
+    .nkw.col-5-768 { width: 41.66%; }
+    .nkw.col-6-768 { width: 50%; }
+    .nkw.col-7-768 { width: 58.33%; }
+    .nkw.col-8-768 { width: 66.66%; }
+    .nkw.col-9-768 { width: 75%; }
+    .nkw.col-10-768 { width: 83.33%; }
+    .nkw.col-11-768 { width: 91.66%; }
+    .nkw.col-12-768 { width: 100%; }
+}
+@media screen and (min-width: 896px) {
+    .nkw.col-1-896 { width: 8.33%; }
+    .nkw.col-2-896 { width: 16.66%; }
+    .nkw.col-3-896 { width: 25%; }
+    .nkw.col-4-896 { width: 33.33%; }
+    .nkw.col-5-896 { width: 41.66%; }
+    .nkw.col-6-896 { width: 50%; }
+    .nkw.col-7-896 { width: 58.33%; }
+    .nkw.col-8-896 { width: 66.66%; }
+    .nkw.col-9-896 { width: 75%; }
+    .nkw.col-10-896 { width: 83.33%; }
+    .nkw.col-11-896 { width: 91.66%; }
+    .nkw.col-12-896 { width: 100%; }
+}
+@media screen and (min-width: 1024px) {
+    .nkw.col-1-1024 { width: 8.33%; }
+    .nkw.col-2-1024 { width: 16.66%; }
+    .nkw.col-3-1024 { width: 25%; }
+    .nkw.col-4-1024 { width: 33.33%; }
+    .nkw.col-5-1024 { width: 41.66%; }
+    .nkw.col-6-1024 { width: 50%; }
+    .nkw.col-7-1024 { width: 58.33%; }
+    .nkw.col-8-1024 { width: 66.66%; }
+    .nkw.col-9-1024 { width: 75%; }
+    .nkw.col-10-1024 { width: 83.33%; }
+    .nkw.col-11-1024 { width: 91.66%; }
+    .nkw.col-12-1024 { width: 100%; }
+}
+@media screen and (min-width: 1024px) {
+    .nkw.col-1-1200 { width: 8.33%; }
+    .nkw.col-2-1200 { width: 16.66%; }
+    .nkw.col-3-1200 { width: 25%; }
+    .nkw.col-4-1200 { width: 33.33%; }
+    .nkw.col-5-1200 { width: 41.66%; }
+    .nkw.col-6-1200 { width: 50%; }
+    .nkw.col-7-1200 { width: 58.33%; }
+    .nkw.col-8-1200 { width: 66.66%; }
+    .nkw.col-9-1200 { width: 75%; }
+    .nkw.col-10-1200 { width: 83.33%; }
+    .nkw.col-11-1200 { width: 91.66%; }
+    .nkw.col-12-1200 { width: 100%; }
+}
