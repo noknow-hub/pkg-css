@@ -7,27 +7,23 @@
     --nkw-color-warning: #ffc107;
     --nkw-color-info: #17a2b8;
     --nkw-color-light: #e8eaed;
+    --nkw-color-dark: #212529;
     --nkw-color-link: #007bff;
     --nkw-color-muted: #6c757d;
     --nkw-color-note: #e66572;
     --nkw-color-add: #28a745;
     --nkw-color-update: #ffc107;
     --nkw-color-delete: #dc3545;
-    --nkw-font-size: 16px;
-    --nkw-font-size-xxs: 10px;
-    --nkw-font-size-xs: 12px;
-    --nkw-font-size-s: 14px;
-    --nkw-font-size-m: 16px;
-    --nkw-font-size-l: 18px;
-    --nkw-font-size-xl: 20px;
-    --nkw-font-size-xxl: 22px;
+    --nkw-font-family-gothic: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+    --nkw-font-family-mincho: font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
+    --nkw-font-size: clamp(16px, 2vw, 20px);      /* 16px */
     --nkw-header-height: 50px;
-    --nkw-h1-font-size: 2.0rem;
-    --nkw-h2-font-size: 1.75rem;
-    --nkw-h3-font-size: 1.5rem;
-    --nkw-h4-font-size: 1.375rem;
-    --nkw-h5-font-size: 1.25rem;
-    --nkw-h6-font-size: 1.125rem;
+    --nkw-h1-font-size: clamp(28px, 4vw, 36px);   /* 32px */
+    --nkw-h2-font-size: clamp(25px, 4vw, 33px);   /* 29px */
+    --nkw-h3-font-size: clamp(22px, 3vw, 30px);   /* 26px */
+    --nkw-h4-font-size: clamp(19px, 3vw, 27px);   /* 23px */
+    --nkw-h5-font-size: clamp(16px, 2vw, 24px); /* 20px */
+    --nkw-h6-font-size: clamp(16px, 2vw, 21px); /* 17px */
     --nkw-icon-size-s: 16px;
     --nkw-icon-size-m: 24px;
     --nkw-icon-size-l: 32px;
@@ -57,6 +53,40 @@
 
 
 /**********************************************************************
+ align-items
+**********************************************************************/
+.nkw.align-items-flex-start {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    align-items: flex-start;
+}
+
+/**********************************************************************
+ background-color
+**********************************************************************/
+.nkw.background-color-light {
+    background-color: var(--nkw-color-light);
+}
+
+/*
+--nkw-color-success: #28a745;
+    --nkw-color-error: #dc3545;
+    --nkw-color-warning: #ffc107;
+    --nkw-color-info: #17a2b8;
+    --nkw-color-light: #e8eaed;
+    --nkw-color-dark: #212529;
+    --nkw-color-link: #007bff;
+    --nkw-color-muted: #6c757d;
+    --nkw-color-note: #e66572;
+    --nkw-color-add: #28a745;
+    --nkw-color-update: #ffc107;
+    --nkw-color-delete: #dc3545;
+*/
+
+
+/**********************************************************************
  body
 **********************************************************************/
 .nkw.body {
@@ -68,32 +98,186 @@
 }
 @media screen and (min-width: 600px) {
     .nkw.body {
-        font-size: calc(var(--nkw-font-size) + 1px);
         line-height: calc(var(--nkw-line-height) + 0.1);
     }
 }
 @media screen and (min-width: 768px) {
     .nkw.body {
-        font-size: calc(var(--nkw-font-size) + 2px);
         line-height: calc(var(--nkw-line-height) + 0.2);
     }
 }
 @media screen and (min-width: 896px) {
     .nkw.body {
-        font-size: calc(var(--nkw-font-size) + 3px);
         line-height: calc(var(--nkw-line-height) + 0.3);
     }   
 } 
 @media screen and (min-width: 1024px) {
     .nkw.body {
-        font-size: calc(var(--nkw-font-size) + 4px);
         line-height: calc(var(--nkw-line-height) + 0.4);
     }
 }
 @media screen and (min-width: 1200px) {
     .nkw.body {
-        font-size: calc(var(--nkw-font-size) + 5px);
         line-height: calc(var(--nkw-line-height) + 0.5);
+    }
+}
+
+
+/**********************************************************************
+ font-size
+**********************************************************************/
+.nkw.font-size-large {
+    font-size: 1.1em;
+}
+.nkw.font-size-x-large {
+    font-size: 1.2em;
+}
+.nkw.font-size-xx-large {
+    font-size: 1.3em;
+}
+.nkw.font-size-xxx-large {
+    font-size: 1.4em;
+}
+.nkw.font-size-small {
+    font-size: 0.9em;
+}
+.nkw.font-size-x-small {
+    font-size: 0.8em;
+}
+.nkw.font-size-xx-small {
+    font-size: 0.7em;
+}
+.nkw.font-size-xxx-small {
+    font-size: 0.6em;
+}
+@media screen and (min-width: 600px) {
+    .nkw.font-size-large-600 {
+        font-size: 1.1em;
+    }
+    .nkw.font-size-x-large-600 {
+        font-size: 1.2em;
+    }
+    .nkw.font-size-xx-large-600 {
+        font-size: 1.3em;
+    }
+    .nkw.font-size-xxx-large-600 {
+        font-size: 1.4em;
+    }
+    .nkw.font-size-small-600 {
+        font-size: 0.9em;
+    }
+    .nkw.font-size-x-small-600 {
+        font-size: 0.8em;
+    }
+    .nkw.font-size-xx-small-600 {
+        font-size: 0.7em;
+    }
+    .nkw.font-size-xxx-small-600 {
+        font-size: 0.6em;
+    }
+}
+@media screen and (min-width: 768px) {
+    .nkw.font-size-large-768 {
+        font-size: 1.1em;
+    }
+    .nkw.font-size-x-large-768 {
+        font-size: 1.2em;
+    }
+    .nkw.font-size-xx-large-768 {
+        font-size: 1.3em;
+    }
+    .nkw.font-size-xxx-large-768 {
+        font-size: 1.4em;
+    }
+    .nkw.font-size-small-768 {
+        font-size: 0.9em;
+    }
+    .nkw.font-size-x-small-768 {
+        font-size: 0.8em;
+    }
+    .nkw.font-size-xx-small-768 {
+        font-size: 0.7em;
+    }
+    .nkw.font-size-xxx-small-768 {
+        font-size: 0.6em;
+    }
+}
+@media screen and (min-width: 896px) {
+    .nkw.font-size-large-896 {
+        font-size: 1.1em;
+    }
+    .nkw.font-size-x-large-896 {
+        font-size: 1.2em;
+    }
+    .nkw.font-size-xx-large-896 {
+        font-size: 1.3em;
+    }
+    .nkw.font-size-xxx-large-896 {
+        font-size: 1.4em;
+    }
+    .nkw.font-size-small-896 {
+        font-size: 0.9em;
+    }
+    .nkw.font-size-x-small-896 {
+        font-size: 0.8em;
+    }
+    .nkw.font-size-xx-small-896 {
+        font-size: 0.7em;
+    }
+    .nkw.font-size-xxx-small-896 {
+        font-size: 0.6em;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .nkw.font-size-large-1024 {
+        font-size: 1.1em;
+    }
+    .nkw.font-size-x-large-1024 {
+        font-size: 1.2em;
+    }
+    .nkw.font-size-xx-large-1024 {
+        font-size: 1.3em;
+    }
+    .nkw.font-size-xxx-large-1024 {
+        font-size: 1.4em;
+    }
+    .nkw.font-size-small-1024 {
+        font-size: 0.9em;
+    }
+    .nkw.font-size-x-small-1024 {
+        font-size: 0.8em;
+    }
+    .nkw.font-size-xx-small-1024 {
+        font-size: 0.7em;
+    }
+    .nkw.font-size-xxx-small-1024 {
+        font-size: 0.6em;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .nkw.font-size-large-1200 {
+        font-size: 1.1em;
+    }
+    .nkw.font-size-x-large-1200 {
+        font-size: 1.2em;
+    }
+    .nkw.font-size-xx-large-1200 {
+        font-size: 1.3em;
+    }
+    .nkw.font-size-xxx-large-1200 {
+        font-size: 1.4em;
+    }
+    .nkw.font-size-small-1200 {
+        font-size: 0.9em;
+    }
+    .nkw.font-size-x-small-1200 {
+        font-size: 0.8em;
+    }
+    .nkw.font-size-xx-small-1200 {
+        font-size: 0.7em;
+    }
+    .nkw.font-size-xxx-small-1200 {
+        font-size: 0.6em;
     }
 }
 
@@ -105,112 +289,22 @@
     font-size: var(--nkw-h1-font-size);
     margin: 50px 0;
 }
-@media screen and (min-width: 600px) {
-    font-size: calc(var(--nkw-h1-font-size) + 1px);
-}
-@media screen and (min-width: 768px) {
-    font-size: calc(var(--nkw-h1-font-size) + 2px);
-}
-@media screen and (min-width: 896px) {
-    font-size: calc(var(--nkw-h1-font-size) + 3px);
-}
-@media screen and (min-width: 1024px) {
-    font-size: calc(var(--nkw-h1-font-size) + 4px);
-}
-@media screen and (min-width: 1200px) {
-    font-size: calc(var(--nkw-h1-font-size) + 5px);
-}
 .nkw.h2 {
     font-size: var(--nkw-h2-font-size);
-    margin: 40px 0 20px;
-}
-@media screen and (min-width: 600px) {
-    font-size: calc(var(--nkw-h2-font-size) + 1px);
-}
-@media screen and (min-width: 768px) {
-    font-size: calc(var(--nkw-h2-font-size) + 2px);
-}
-@media screen and (min-width: 896px) {
-    font-size: calc(var(--nkw-h2-font-size) + 3px);
-}
-@media screen and (min-width: 1024px) {
-    font-size: calc(var(--nkw-h2-font-size) + 4px);
-}
-@media screen and (min-width: 1200px) {
-    font-size: calc(var(--nkw-h2-font-size) + 5px);
+    margin: 120px 0 20px;
 }
 .nkw.h3 {
     font-size: var(--nkw-h3-font-size);
-    margin: 30px 0 20px;
-}
-@media screen and (min-width: 600px) {
-    font-size: calc(var(--nkw-h3-font-size) + 1px);
-}
-@media screen and (min-width: 768px) {
-    font-size: calc(var(--nkw-h3-font-size) + 2px);
-}
-@media screen and (min-width: 896px) {
-    font-size: calc(var(--nkw-h3-font-size) + 3px);
-}
-@media screen and (min-width: 1024px) {
-    font-size: calc(var(--nkw-h3-font-size) + 4px);
-}
-@media screen and (min-width: 1200px) {
-    font-size: calc(var(--nkw-h3-font-size) + 5px);
+    margin: 60px 0 20px;
 }
 .nkw.h4 {
     font-size: var(--nkw-h4-font-size);
 }
-@media screen and (min-width: 600px) {
-    font-size: calc(var(--nkw-h4-font-size) + 1px);
-}
-@media screen and (min-width: 768px) {
-    font-size: calc(var(--nkw-h4-font-size) + 2px);
-}
-@media screen and (min-width: 896px) {
-    font-size: calc(var(--nkw-h4-font-size) + 3px);
-}
-@media screen and (min-width: 1024px) {
-    font-size: calc(var(--nkw-h4-font-size) + 4px);
-}
-@media screen and (min-width: 1200px) {
-    font-size: calc(var(--nkw-h4-font-size) + 5px);
-}
 .nkw.h5 {
     font-size: var(--nkw-h5-font-size);
 }
-@media screen and (min-width: 600px) {
-    font-size: calc(var(--nkw-h5-font-size) + 1px);
-}
-@media screen and (min-width: 768px) {
-    font-size: calc(var(--nkw-h5-font-size) + 2px);
-}
-@media screen and (min-width: 896px) {
-    font-size: calc(var(--nkw-h5-font-size) + 3px);
-}
-@media screen and (min-width: 1024px) {
-    font-size: calc(var(--nkw-h5-font-size) + 4px);
-}
-@media screen and (min-width: 1200px) {
-    font-size: calc(var(--nkw-h5-font-size) + 5px);
-}
 .nkw.h6 {
     font-size: var(--nkw-h6-font-size);
-}
-@media screen and (min-width: 600px) {
-    font-size: calc(var(--nkw-h6-font-size) + 1px);
-}
-@media screen and (min-width: 768px) {
-    font-size: calc(var(--nkw-h6-font-size) + 2px);
-}
-@media screen and (min-width: 896px) {
-    font-size: calc(var(--nkw-h6-font-size) + 3px);
-}
-@media screen and (min-width: 1024px) {
-    font-size: calc(var(--nkw-h6-font-size) + 4px);
-}
-@media screen and (min-width: 1200px) {
-    font-size: calc(var(--nkw-h6-font-size) + 5px);
 }
 .nkw.h1, .nkw.h2, .nkw.h3, .nkw.h4, .nkw.h5, .nkw.h6 {
     color: inherit;
@@ -260,6 +354,50 @@
 
 
 /**********************************************************************
+ img
+**********************************************************************/
+.nkw.img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%
+}
+
+
+/**********************************************************************
+ margin
+**********************************************************************/
+.nkw.margin-left-auto {
+    margin-left: auto;
+}
+@media screen and (min-width: 600px) {
+    .nkw.margin-left-auto-600 {
+        margin-left: auto;
+    }
+}
+@media screen and (min-width: 768px) {
+    .nkw.margin-left-auto-768 {
+        margin-left: auto;
+    }
+}
+@media screen and (min-width: 896px) {
+    .nkw.margin-left-auto-896 {
+        margin-left: auto;
+    }   
+}
+@media screen and (min-width: 1024px) {
+    .nkw.margin-left-auto-1024 {
+        margin-left: auto;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .nkw.margin-left-auto-1200 {
+        margin-left: auto;
+    }
+}
+
+
+/**********************************************************************
  section
 **********************************************************************/
 .nkw.section {
@@ -267,17 +405,24 @@
     width: calc(100% - 40px);
 }
 
+
 /**********************************************************************
  button
 **********************************************************************/
+.nkw.button {
+    background-color: #fff;
+    border: none;
+    box-sizing: border-box;
+    color: inherit;
+    fill: inherit;
+    padding: 10px;
+}
 .nkw.button-success {
     background-color: var(--nkw-color-success) !important;
     border: none !important;
     box-sizing: border-box;
     color: #fff !important;
     fill: #fff !important;
-    font-size: inherit;
-    line-height: inherit;
     padding: 10px;
 }
 .nkw.button-add {
@@ -286,8 +431,6 @@
     box-sizing: border-box;
     color: #fff !important;
     fill: #fff !important;
-    font-size: inherit;
-    line-height: inherit;
     padding: 10px;
 }
 .nkw.button-update {
@@ -296,8 +439,6 @@
     box-sizing: border-box;
     color: #fff !important;
     fill: #fff !important;
-    font-size: inherit;
-    line-height: inherit;
     padding: 10px;
 }
 .nkw.button-delete {
@@ -306,8 +447,6 @@
     box-sizing: border-box;
     color: #fff !important;
     fill: #fff !important;
-    font-size: inherit;
-    line-height: inherit;
     padding: 10px;
 }
 [class*="nkw-button-"].round {

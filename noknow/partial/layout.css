@@ -46,8 +46,6 @@
  .nkw.col-*
 **********************************************************************/
 .nkw.row {
-    -webkit-align-items: center;
-    align-items: center;
     display: -webkit-flex;
     display: flex;
     flex-direction: row;

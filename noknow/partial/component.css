@@ -12,11 +12,25 @@
     --nkw-form-height-icon: 22px;
     --nkw-form-width-icon: 22px;
     --nkw-icon-size: 24px;
-    --nkw-side-menu-font-size-list-title: 0.9rem;
-    --nkw-side-menu-font-size-list-item: 0.8rem;
-    --nkw-side-menu-height: 36px;
-    --nkw-side-menu-background-color-hover-item: #e8e8e8;
-    --nkw-side-menu-border-sub-list: 3px solid #6c757d;
+    --nkw-side-menu-box-font-size-list-title: 0.9rem;
+    --nkw-side-menu-box-font-size-list-item: 0.8rem;
+    --nkw-side-menu-box-height: 36px;
+    --nkw-side-menu-box-background-color-hover-item: #e8e8e8;
+    --nkw-side-menu-box-border-sub-list: 3px solid #6c757d;
+    --nkw-tag-list-background-color: #f9f9f9;
+    --nkw-tag-list-border: 1px solid #e8eaed;
+}
+
+
+/**********************************************************************
+ Box
+
+ [HTML]
+ <div class="nkw box"></div>
+**********************************************************************/
+.nkw.box {
+    box-sizing: border-box;
+    padding: 20px;
 }
 
 
@@ -446,7 +460,6 @@
  Icon
 **********************************************************************/
 .nkw.icon {
-    fill: inherit;
     height: var(--nkw-icon-size);
     width: var(--nkw-icon-size);
 }
@@ -523,7 +536,7 @@
  [HTML]
  
 **********************************************************************/
-.nkw.side-menu {
+.nkw.side-menu-box {
     -webkit-align-items: center;
     align-items: center;
     box-sizing: border-box;
@@ -533,21 +546,21 @@
     position: relative;
     width: 100%;
 }
-.nkw.side-menu > nav {
+.nkw.side-menu-box > nav {
     background-color: #fff;
     box-sizing: border-box;
     padding: 10px;
     width: calc(100% - 40px);
 }
-.nkw.side-menu > nav.round {
+.nkw.side-menu-box > nav.round {
     border-radius: var(--nkw-border-radius);
 }
-.nkw.side-menu > nav .list {
+.nkw.side-menu-box > nav .list {
     box-sizing: border-box;
     margin: 0;
     width: 100%;
 }
-.nkw.side-menu > nav .item {
+.nkw.side-menu-box > nav .item {
     -webkit-align-items: center;
     align-items: center;
     border-radius: var(--nkw-border-radius);
@@ -555,76 +568,76 @@
     color: inherit;
     display: -webkit-flex;
     display: flex;
-    font-size: var(--nkw-side-menu-font-size-list-item);
+    font-size: var(--nkw-side-menu-box-font-size-list-item);
     line-height: 1.25;
-    min-height: var(--nkw-side-menu-height);
+    min-height: var(--nkw-side-menu-box-height);
     margin: 3px 0;
     padding: 7px;
     text-decoration: none;
 }
-.nkw.side-menu > nav .item.round {
+.nkw.side-menu-box > nav .item.round {
     border-radius: var(--nkw-border-radius);
 }
-.nkw.side-menu > nav .item.title {
-    font-size: var(--nkw-side-menu-font-size-list-title);
+.nkw.side-menu-box > nav .item.title {
+    font-size: var(--nkw-side-menu-box-font-size-list-title);
     font-weight: bold;
     margin: 1.5rem 0 0;
 }
-.nkw.side-menu > nav .item.title.active {
+.nkw.side-menu-box > nav .item.title.active {
     margin-bottom: 0.5em;
 }
-.nkw.side-menu > nav .item.link {
+.nkw.side-menu-box > nav .item.link {
     transition: all 0.3s;
 }
-.nkw.side-menu > nav .item.link:hover {
-    background-color: var(--nkw-side-menu-background-color-hover-item);
+.nkw.side-menu-box > nav .item.link:hover {
+    background-color: var(--nkw-side-menu-box-background-color-hover-item);
 }
-.nkw.side-menu > nav .sub-list {
-    border-left: var(--nkw-side-menu-border-sub-list);
+.nkw.side-menu-box > nav .sub-list {
+    border-left: var(--nkw-side-menu-box-border-sub-list);
     box-sizing: border-box;
     margin-left: 1.0rem !important;
     padding-left: 3px;
     width: calc(100% - 1.0rem);
 }
-.nkw.side-menu > nav .item.title + .sub-list {
+.nkw.side-menu-box > nav .item.title + .sub-list {
     height: 0;
     overflow: hidden;
 }
-.nkw.side-menu > nav .item.title.active + .sub-list {
+.nkw.side-menu-box > nav .item.title.active + .sub-list {
     height: auto;
 }
-.nkw.side-menu > nav .item.drop-down {
+.nkw.side-menu-box > nav .item.drop-down {
     cursor: pointer;
 }
-.nkw.side-menu > nav .item > svg {
+.nkw.side-menu-box > nav .item > svg {
     fill: inherit;
-    height: var(--nkw-icon-size-m);
+    height: var(--nkw-icon-size);
     margin-right: 5px;
-    width: var(--nkw-icon-size-m);
+    width: var(--nkw-icon-size);
 }
-.nkw.side-menu > nav .item.drop-down > .rotate-180 {
+.nkw.side-menu-box > nav .item.drop-down > .rotate-180 {
     -webkit-transform: rotateX(0);
     -moz-transform: rotateX(0);
     transform: rotateX(0);
     transition: all 0.3s;
 }
-.nkw.side-menu > nav .item.drop-down.active > .rotate-180 {
+.nkw.side-menu-box > nav .item.drop-down.active > .rotate-180 {
     -webkit-transform: rotateX(180deg);
     -moz-transform: rotateX(180deg);
     transform: rotateX(180deg);
 }
-.nkw.side-menu > nav .item .tag {
+.nkw.side-menu-box > nav .item .tag {
     box-sizing: border-box;
     color: rgba(0, 0, 0, 0.4);
     font-size: 10px;
     margin: 0 10px;
 }
-.nkw.side-menu ul {
+.nkw.side-menu-box ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-.nkw.side-menu li {
+.nkw.side-menu-box li {
     margin: 0;
     padding: 0;
 }
@@ -663,15 +676,12 @@
  </div>
 **********************************************************************/
 .nkw.profile-card-box {
-    margin: 20px 0;
+    margin: 20px auto;
     padding: 0;
     position: relative;
-    width: 100%;
+    width: calc(100% - 40px);
 }
-@media screen and (min-width: 481px) {
-    .nkw.profile-card-box {
-        margin: 40px 0;
-    }
+@media screen and (min-width: 600px) {
     .nkw.profile-card-box.wrap {
         display: -webkit-flex;
         display: flex;
@@ -699,7 +709,7 @@
     height: 150px;
     margin: auto;
     position: relative;
-    width: calc(100% - 40px);
+    width: 100%;
     z-index: 1;
 }
 .nkw.profile-card-box.round > .img-header-box {
@@ -708,7 +718,7 @@
     box-sizing: border-box;
     overflow: hidden;
 }
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 600px) {
     .nkw.profile-card-box.wrap > .img-header-box {
         height: 100%;
     }
@@ -729,10 +739,10 @@
     margin: auto;
     overflow: hidden;
     position: relative;
-    width: calc(100% - 40px);
+    width: 100%;
     z-index: 1;
 }
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 600px) {
     .nkw.profile-card-box.with-icon-box > .content-box {
         padding-top: 50px;
     }
@@ -742,7 +752,7 @@
     border-bottom-right-radius: var(--nkw-border-radius);
     overflow: hidden;
 }
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 600px) {
     .nkw.profile-card-box.wrap > .content-box {
         display: -webkit-flex;
         display: flex;
@@ -759,7 +769,6 @@
 }
 .nkw.profile-card-box > .content-box > .name {
     color: inherit;
-    font-size: larger;
     font-weight: bold;
     margin: 10px;
     text-align: center;
@@ -767,7 +776,6 @@
 }
 .nkw.profile-card-box > .content-box > .profession {
     color: inherit;
-    font-size: smaller;
     font-weight: bold;
     margin: 10px;
     text-align: center;
@@ -776,7 +784,6 @@
 .nkw.profile-card-box > .content-box > .bio {
     color: inherit;
     filter: opacity(0.6);
-    font-size: smaller;
     line-height: 1.25;
     margin: 10px;
     text-align: center;
@@ -845,7 +852,7 @@
      <!-- Image list view -->
      <div class="image-list-view-box">
        <ul class="image-list-view" id="nkw-image-list-view">
-         <li class="image-list-view-item">
+         <li class="image-list-view-item [checkable]">
            [<img> | <video>]
            <div class="row">
               ...
@@ -888,7 +895,6 @@
     display: -webkit-flex;
     display: flex;
     flex-wrap: wrap;
-    height: 50px;
     margin: 10px;
     position: relative;
     width: calc(100% - 20px);
@@ -897,13 +903,9 @@
     margin-left: auto;
     margin-right: auto;
 }
-.nkw.form-box > form .group.with-label {
-    margin-top: 20px;
-}
 .nkw.form-box > form .group > input {
     border: none;
     box-sizing: border-box;
-    color: var(--nkw-form-color);
     font-family: inherit;
     font-size: inherit;
     height: 50px;
@@ -925,7 +927,7 @@
     height: 50px;
     line-height: 1.5;
     outline: none;
-    padding: 20px 10px 10px 10px;
+    padding: 20px 10px 5px 10px;
     width: 100%;
 }
 .nkw.form-box > form .group.round > select {
@@ -941,7 +943,7 @@
     line-height: 1.5;
     min-height: 7.0em;
     outline: none;
-    padding: 10px;
+    padding: 20px 10px 5px 10px;
     resize: vertical;
     width: 100%;
 }
@@ -949,7 +951,6 @@
     border-radius: var(--nkw-border-radius);
 }
 .nkw.form-box > form .group > label {
-    background: var(--nkw-form-background-color);
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
     box-sizing: border-box;
@@ -1015,11 +1016,9 @@
     cursor: pointer;
     display: -webkit-flex;
     display: flex;
-    font-size: inherit;
     height: 50px;
     -webkit-justify-content: center;
     justify-content: center;
-    line-height: 1.5;
     outline: none;
     padding: 8px;
     width: 100%;
@@ -1104,12 +1103,66 @@
     margin-left: auto;
     margin-right: auto;
 }
-.nkw.form-box .image-list-view-item > img {
+.nkw.form-box .image-list-view > .image-list-view-item.checkable {
+    position: relative;
+}
+.nkw.form-box .image-list-view-item img {
     display: block;
     max-height: 100%;
     object-fit: contain;
     width: 100%;
 }
+.nkw.form-box input[type="checkbox"] {
+    display: none;
+}
+.nkw.form-box input[type="checkbox"]:checked + * {
+    filter: opacity(0.7);
+    position: relative;
+}
+.nkw.form-box  input[type="checkbox"]:checked + *::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 10px;
+    border-left: 5px solid #000;
+    border-bottom: 5px solid #000;
+    transform: rotate(-45deg);
+}
+.nkw.form-box .image-list-view-box > .not-found {
+    display: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    opacity: 0.7;
+    margin: 3.0em 0;
+    text-align: center;
+    width: 100%;
+}
+.nkw.form-box .image-list-view-box > .not-found.active {
+    display: block;
+}
+.nkw.form-box .image-list-view-box > .see-more {
+    border-radius: 7px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin: 1.5em auto;
+    outline: none;
+    padding: 1.0em;
+    text-align: center;
+    transition: all 0.3s;
+}
+.nkw.form-box .image-list-view-box > .see-more:hover {
+    opacity: 0.7;
+}
+.nkw.form-box .image-list-view-box > .see-more.active {
+    display: block;
+}
+
 .nkw.form-box > form .w-unset {
     width: unset;
 }
@@ -1165,7 +1218,6 @@
 .nkw.table-box > table th {
     box-sizing: border-box;
     filter: opacity(0.7);
-    font-size: 0.7rem;
     font-weight: bold;
     padding: 10px 5px;
     text-align: left;
@@ -1347,4 +1399,50 @@
 .nkw.table-box > table .f-s-smaller {
     font-size: smaller;
 }
+
+
+/**********************************************************************
+ Tag list
+
+ [HTML]
+ <ul class="nkw tag-list">
+   <li class="item">
+     [<svg class="pre-icon"></svg>]
+     TAG_NAME
+     [<svg class="post-icon"></svg>]
+   </li>
+ </ul>
+**********************************************************************/
+.nkw.tag-list {
+    -webkit-align-items: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 20px 0;
+    padding: 0;
+}
+@media screen and (min-width: 768px) {
+    .nkw.tag-list {
+        margin: 1.0em;
+    }
+}
+.nkw.tag-list > .item {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: var(--nkw-tag-list-background-color);
+    border: var(--nkw-tag-list-border);
+    border-radius: 7px;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 0.85em;
+    margin: 3px;
+    padding: 5px 10px;
+}
+
+
+
 
