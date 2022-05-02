@@ -24,6 +24,7 @@
     --nkw-h4-font-size: clamp(19px, 3vw, 27px);   /* 23px */
     --nkw-h5-font-size: clamp(16px, 2vw, 24px); /* 20px */
     --nkw-h6-font-size: clamp(16px, 2vw, 21px); /* 17px */
+    --nkw-icon-size: 24px;
     --nkw-icon-size-s: 16px;
     --nkw-icon-size-m: 24px;
     --nkw-icon-size-l: 32px;
@@ -120,6 +121,164 @@
     .nkw.body {
         line-height: calc(var(--nkw-line-height) + 0.5);
     }
+}
+
+
+/**********************************************************************
+ border-radius
+**********************************************************************/
+.nkw.border-radius {
+    border-radius: var(--nkw-border-radius);
+}
+
+
+/**********************************************************************
+ button
+**********************************************************************/
+.nkw.button {
+    background-color: #fff;
+    border: none;
+    box-sizing: border-box;
+    color: inherit;
+    cursor: pointer;
+    fill: inherit;
+    font-size: inherit;
+    padding: 10px;
+}
+.nkw.button.add {
+    background-color: var(--nkw-color-add);
+    color: #fff;
+    fill: #fff;
+}
+.nkw.button-success {
+    background-color: var(--nkw-color-success) !important;
+    border: none !important;
+    box-sizing: border-box;
+    color: #fff !important;
+    cursor: pointer;
+    fill: #fff !important;
+    font-size: inherit;
+    padding: 10px;
+}
+.nkw.button-add {
+    background-color: var(--nkw-color-add) !important;
+    border: none !important;
+    box-sizing: border-box;
+    color: #fff !important;
+    cursor: pointer;
+    fill: #fff !important;
+    font-size: inherit;
+    padding: 10px;
+}
+.nkw.button-update {
+    background-color: var(--nkw-color-update) !important;
+    border: none !important;
+    box-sizing: border-box;
+    color: #fff !important;
+    cursor: pointer;
+    fill: #fff !important;
+    font-size: inherit;
+    padding: 10px;
+}
+.nkw.button-delete {
+    background-color: var(--nkw-color-delete) !important;
+    border: none !important;
+    box-sizing: border-box;
+    color: #fff !important;
+    cursor: pointer;
+    fill: #fff !important;
+    font-size: inherit;
+    padding: 10px;
+}
+[class*="nkw-button-"].round {
+    border-radius: var(--nkw-border-radius);
+}
+
+
+/**********************************************************************
+ flexbox
+**********************************************************************/
+.nkw.display-flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+.nkw.flex-direction-column {
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.nkw.flex-wrap-wrap {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.nkw.justify-content-flex-end {
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    -webkit-flex-pack: end;
+    -ms-flex-pack: end;
+    -moz-justify-content: flex-end;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+}
+.nkw.justify-content-center {
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -webkit-flex-pack: center;
+    -ms-flex-pack: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.nkw.justify-content-space-between {
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -webkit-flex-pack: justify;
+  -ms-flex-pack: justify;
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.nkw.justify-content-space-around {
+    -moz-justify-content: space-around;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+}
+.nkw.align-items-flex-end {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    -webkit-align-items: flex-end;
+    -moz-align-items: flex-end;
+    align-items: flex-end;
+}
+.nkw.align-items-center {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+}
+.nkw.align-items-flex-end {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  -webkit-align-items: flex-end;
+  -moz-align-items: flex-end;
+  align-items: flex-end;
+}
+.nkw.align-items-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
 }
 
 
@@ -360,40 +519,44 @@
     display: block;
     height: 100%;
     object-fit: cover;
-    width: 100%
+    width: 100%;
 }
 
 
 /**********************************************************************
- margin
+ Margin
 **********************************************************************/
-.nkw.margin-left-auto {
+.nkw.margin-unset { margin: unset; }
+.nkw.margin-unset-important { margin: unset !important; }
+.nkw.margin-center {
     margin-left: auto;
+    margin-right: auto;
 }
+.nkw.margin-top-5 { margin-top: 5px; }
+.nkw.margin-top-10 { margin-top: 10px; }
+.nkw.margin-top-20 { margin-top: 20px; }
+
+.nkw.margin-bottom-5 { margin-top: 5px; }
+.nkw.margin-bottom-10 { margin-top: 10px; }
+.nkw.margin-bottom-20 { margin-top: 20px; }
+
+.nkw.margin-left-auto { margin-left: auto; }
+.nkw.margin-right-5px { margin-right: 5px; }
+.nkw.margin-top-40px { margin-top: 40px; }
 @media screen and (min-width: 600px) {
-    .nkw.margin-left-auto-600 {
-        margin-left: auto;
-    }
+    .nkw.margin-left-auto-600 { margin-left: auto; }
 }
 @media screen and (min-width: 768px) {
-    .nkw.margin-left-auto-768 {
-        margin-left: auto;
-    }
+    .nkw.margin-left-auto-768 { margin-left: auto; }
 }
 @media screen and (min-width: 896px) {
-    .nkw.margin-left-auto-896 {
-        margin-left: auto;
-    }   
+    .nkw.margin-left-auto-896 { margin-left: auto; }
 }
 @media screen and (min-width: 1024px) {
-    .nkw.margin-left-auto-1024 {
-        margin-left: auto;
-    }
+    .nkw.margin-left-auto-1024 { margin-left: auto; }
 }
 @media screen and (min-width: 1200px) {
-    .nkw.margin-left-auto-1200 {
-        margin-left: auto;
-    }
+    .nkw.margin-left-auto-1200 { margin-left: auto; }
 }
 
 
@@ -407,52 +570,11 @@
 
 
 /**********************************************************************
- button
+ text-align
 **********************************************************************/
-.nkw.button {
-    background-color: #fff;
-    border: none;
-    box-sizing: border-box;
-    color: inherit;
-    fill: inherit;
-    padding: 10px;
+.nkw.text-align-center {
+    text-align: center;
 }
-.nkw.button-success {
-    background-color: var(--nkw-color-success) !important;
-    border: none !important;
-    box-sizing: border-box;
-    color: #fff !important;
-    fill: #fff !important;
-    padding: 10px;
-}
-.nkw.button-add {
-    background-color: var(--nkw-color-add) !important;
-    border: none !important;
-    box-sizing: border-box;
-    color: #fff !important;
-    fill: #fff !important;
-    padding: 10px;
-}
-.nkw.button-update {
-    background-color: var(--nkw-color-update) !important;
-    border: none !important;
-    box-sizing: border-box;
-    color: #fff !important;
-    fill: #fff !important;
-    padding: 10px;
-}
-.nkw.button-delete {
-    background-color: var(--nkw-color-delete) !important;
-    border: none !important;
-    box-sizing: border-box;
-    color: #fff !important;
-    fill: #fff !important;
-    padding: 10px;
-}
-[class*="nkw-button-"].round {
-    border-radius: var(--nkw-border-radius);
-}
-
 
 
 

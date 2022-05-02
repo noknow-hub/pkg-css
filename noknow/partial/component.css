@@ -30,6 +30,7 @@
 **********************************************************************/
 .nkw.box {
     box-sizing: border-box;
+    maegin: 20px;
     padding: 20px;
 }
 
@@ -161,19 +162,14 @@
 .nkw.card-view-box > .view .item:hover {
     opacity: 0.7;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
     .nkw.card-view-box > .view .item {
         max-width: calc(50% - 40px);
     }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1200px) {
     .nkw.card-view-box > .view .item {
         max-width: calc(33% - 40px);
-    }
-}
-@media screen and (min-width: 1500px) {
-    .nkw.card-view-box > .view .item {
-        max-width: calc(25% - 40px);
     }
 }
 .nkw.card-view-box > .view .item .tag-box {
@@ -699,7 +695,7 @@
     width: 100px;
     z-index: 2;
 }
-.nkw.profile-card-box > .icon-box > .icon {
+.nkw.profile-card-box > .icon-box .icon {
     display: block;
     height: 100%;
     object-fit: cover;
@@ -727,7 +723,10 @@
         border-bottom-left-radius: var(--nkw-border-radius);
     }
 }
-.nkw.profile-card-box > .img-header-box > .img {
+.nkw.profile-card-box > .img-header-box > picture {
+    width: 100%;
+}
+.nkw.profile-card-box > .img-header-box .img {
     display: block;
     height: 100%;
     object-fit: cover;
@@ -829,18 +828,103 @@
 
 
 /**********************************************************************
- Form box
+ Form Group
+**********************************************************************/
+.nkw.form-group {
+    margin: 10px 5px;
+    position: relative;
+    width: calc(100% - 10px);
+}
+.nkw.form-group.border-bottom > .form-input-group {
+    background-color: inherit;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.nkw.form-group.border-bottom > .form-input-group > .input { 
+    background-color: inherit;
+}
+.nkw.form-group > .label {
+    box-sizing: border-box;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 0.7em;
+    margin-bottom: 5px;
+    width: 100%;
+}
+.nkw.form-group > .note {
+    display: none;
+    font-size: 0.7em;
+    margin-top: 5px;
+    word-break: break-all;
+}
+.nkw.form-group > .note.active {
+    display: inline-block;
+}
+.nkw.form-group > .note.success {
+    color: var(--nkw-color-success);
+}
+.nkw.form-group > .note.error {
+    color: var(--nkw-color-error);
+}
+.nkw.form-group > .input,
+.nkw.form-group > .form-input-group > .input {
+    border: none;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: inherit;
+    height: 50px;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+}
+.nkw.form-group > .form-input-group {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #fff;
+    display: -webkit-flex;
+    display: flex;
+    position: relative;
+}
+.nkw.form-group > .form-input-group.icon-left {
+    padding-left: calc(var(--nkw-icon-size) + 20px);
+}
+.nkw.form-group > .form-input-group.icon-right {
+    padding-right: calc(var(--nkw-icon-size) + 20px);
+}
+.nkw.form-group > .form-input-group > .icon {
+    box-sizing: border-box;
+    display: block;
+    fill: inherit;
+    height: var(--nkw-icon-size);
+    position: absolute;
+    width: calc(var(--nkw-icon-size) + 20px);
+}
+.nkw.form-group > .form-input-group.icon-left > .icon {
+    left: 0;
+}
+.nkw.form-group > .form-input-group.icon-right > .icon {
+    right: 0;
+}
+
+
+/**********************************************************************
+ Form box [Older]
 
  [HTML]
  <div class="nkw form-box">
    <form>
-     <div class="row">
-       <div class="group">
-         <label>{{ .Locale.dictionary.keywords }}</label>
+     <div class="form-row">
+       <div class="form-group">
+         <label class="form-label">{{ .Locale.dictionary.keywords }}</label>
          <input name="keywords" type="text" placeholder="{{ .Locale.dictionary.prefix_match }}" />
+         <small class="form-note error">Requred</small>
+       </div>
+       <div class="form-group">
+         <label class="form-label">{{ .Locale.dictionary.keywords }}</label>
+         <input name="keywords" type="text" placeholder="{{ .Locale.dictionary.prefix_match }}" />
+         <small class="form-note error">Requred</small>
        </div>
      </div>
-     <div class="row">
+     <div class="form-row">
        <div class="form-btn right">
          <button name="search" type="button">
            <svg id="searchBtn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><use xlink:href="/img/icon/icons.svg#search"/></svg>
@@ -863,6 +947,7 @@
    </form>
  </div>
 **********************************************************************/
+/* Older below */
 .nkw.form-box {
     width: 100%;
 }
@@ -909,9 +994,8 @@
     font-family: inherit;
     font-size: inherit;
     height: 50px;
-    line-height: 1.5;
     outline: none;
-    padding: 20px 10px 10px 10px;
+    padding: 10px;
     width: 100%;
 }
 .nkw.form-box > form .group.round > input {
@@ -951,23 +1035,28 @@
     border-radius: var(--nkw-border-radius);
 }
 .nkw.form-box > form .group > label {
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
-    box-sizing: border-box;
-    color: rgba(0, 0, 0, 0.5);
-    font-family: inherit;
-    font-size: 0.65rem;
-    height: 20px;
-    line-height: 1.0;
-    padding: 7px 0 0 7px;
-    position: absolute;
-    top: 0;
-    display: -webkit-flex;
-    display: flex;
     -webkit-align-items: center;
     align-items: center;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 0.7em;
+    height: 20px;
+    display: -webkit-flex;
+    display: flex;
+    margin-bottom: 5px;
     width: 100%;
     z-index: 2;
+}
+.nkw.form-box > form .group > small {
+    font-size: 0.7em;
+    margin-top: 5px;
+    word-break: break-all;
+}
+.nkw.form-box > form .group > small.success {
+    color: var(--nkw-color-success);
+}
+.nkw.form-box > form .group > small.error {
+    color: var(--nkw-color-error);
 }
 .nkw.form-box > form .group > svg {
     background: var(--nkw-form-background-color);
