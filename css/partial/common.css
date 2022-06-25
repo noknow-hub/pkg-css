@@ -2,6 +2,7 @@
 
 :root {
     --nkw-border-radius: 7px;
+    --nkw-color-comment: #008000;
     --nkw-color-success: #28a745;
     --nkw-color-error: #dc3545;
     --nkw-color-warning: #ffc107;
@@ -122,6 +123,10 @@
 /**********************************************************************
  color
 **********************************************************************/
+.color-comment {
+    color: var(--nkw-color-comment);
+    fill:  var(--nkw-color-comment);
+}
 .color-sns-discord {
     color: var(--nkw-color-sns-discord);
     fill: var(--nkw-color-sns-discord);

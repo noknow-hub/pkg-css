@@ -4,7 +4,7 @@
     "url": "https://github.com/noknow-hub/pkg-css/issues"
   },
   "description": "CSS utilities",
-  "homepage": "https://github.com/noknow-hub/pkg-css/blob/main/noknow/README.md",
+  "homepage": "https://github.com/noknow-hub/pkg-css/blob/main/css/README.md",
   "license": "MIT",
   "main": "index.js",
   "name": "@noknow/css",
@@ -20,5 +20,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module",
-  "version": "0.1.0"
+  "version": "0.3.0"
 }

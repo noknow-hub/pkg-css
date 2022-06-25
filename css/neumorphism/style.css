@@ -189,6 +189,10 @@
     font-size: var(--nkw-h3-font-size);
     margin: 60px 0 20px;
 }
+.article h4 {
+    font-size: var(--nkw-h4-font-size);
+    margin: 40px 0 20px;
+}
 .article ul,
 .article ol {
     margin: 20px 0 20px 40px;
@@ -198,6 +202,7 @@
 }
 .article ul ul {
     list-style-type: circle;
+    margin: 0 0 0 40px;
 }
 .article ul ul ul {
     list-style-type: square;
@@ -225,6 +230,59 @@
 }
 .article strong {
     color: var(--nkw-color-note);
+}
+.article .thumbnail-box {
+    height: 300px;
+    width: 100%;
+}
+@media screen and (min-width: 768px) {
+    .article .thumbnail-box {
+        height: 400px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .article .thumbnail-box {
+        height: 500px;
+    }
+}
+.article .thumbnail-box img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+.article .console-box {
+    background-color: var(--nkw-neumorphism-bg-color-theme-light);
+    border: var(--nkw-neumorphism-border-light);
+    border-radius: var(--nkw-neumorphism-border-radius);
+    box-shadow: var(--nkw-neumorphism-box-shadow-inset-light);
+    box-sizing: border-box;
+    color: var(--nkw-neumorphism-color-theme-light);
+    margin: 20px auto;
+    padding: 20px;
+}
+.article .console-box > .title {
+    background-color: var(--nkw-neumorphism-bg-color-theme-light);
+    border: var(--nkw-neumorphism-border-light);
+    border-radius: var(--nkw-neumorphism-border-radius);
+    box-shadow: var(--nkw-neumorphism-box-shadow-inset-light);
+    box-sizing: border-box;
+    color: var(--nkw-neumorphism-color-theme-light);
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+}
+.article .console-box > pre {
+    font-family: Consolas, Menlo, 'Liberation Mono', Courier, Monaco, monospace;
+    font-size: 0.9em;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+@media screen and (min-width: 768px) {
+    .article .console-box > pre {
+        font-size: 0.8em;
+    }
 }
 
 
@@ -377,7 +435,7 @@ html[data-theme="dark"] .body {
     padding: 20px;
 }
 .section .box {
-    margin: 0 auto;
+    margin: 20px auto;
 }
 .box.inset {
     box-shadow: var(--nkw-neumorphism-box-shadow-inset-light);
@@ -1051,6 +1109,122 @@ html[data-theme="dark"] .body {
     position: absolute;
     right: 0;
     text-align: right;
+}
+
+
+/**********************************************************************
+ List box
+
+ [HTML]
+ <div class="list-box">
+   <ul class="list">
+     <li class="item">
+       <div class="img-box">
+         <img class="img" src="" alt="" loading="lazy">
+         or
+         <picture>
+           <source srcset="/img/tool/svg_icon_downloader/thumbnail.webp">
+            <img src="img/tool/svg_icon_downloader/thumbnail.png" alt="SVG icon downloader" loading="lazy">
+         </picture>
+       </div>
+       <div class="content-box">
+         <h3 class="title"></h3>
+         <div class="attr-box">
+           <time class="date"></time>
+           <span class="tag"></span>
+         </div>
+         <p class="excerpt"></p>
+         <div class="read-more-box">
+           <a class="read-more" href="">Read more</a>
+         </div>
+       </div>
+     </li>
+     ...
+   </ul>
+   <button class="see-more" id="nkw-card-view-box-see-more">See more</button>
+   <p class="not-found" id="nkw-card-view-box-not-found">XXX was not found</p>
+ </div>
+**********************************************************************/
+.list-box {
+    box-sizing: border-box;
+    margin: 20px auto;
+    width: calc(100% - 40px);
+}
+.list-box > .list {
+
+}
+.list-box > .list > .item {
+    border-top: 1px solid var(--nkw-neumorphism-color-theme-light);
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    padding: 20px 0;
+}
+.list-box > .list > .item:first-child {
+    border-top: none;
+}
+.list-box > .list > .item > .img-box {
+    border-radius: var(--nkw-neumorphism-border-radius);
+    box-sizing: border-box;
+    height: 100%;
+    overflow: hidden;
+    padding-right: 20px;
+    width: 170px;
+}
+.list-box > .list > .item > .content-box {
+    flex: 1 1;
+}
+.list-box > .list > .item > .img-box img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+.list-box > .list > .item > .content-box > .title {
+    font-size: 1.15em;
+    font-weight: bold;
+}
+.list-box > .list > .item > .content-box > .excerpt {
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+.list-box > .list > .item > .content-box > .attr-box {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    margin-top: 5px;
+}
+.list-box > .list > .item > .content-box > .attr-box > .attr {
+    font-size: 0.8em;
+    margin-left: 5px;
+    opacity: 0.8;
+}
+.list-box > .list > .item > .content-box > .attr-box > .attr:first-child {
+    margin-left: unset;
+}
+.list-box > .list > .item > .content-box > .read-more-box {
+    margin: 20px 0;
+    text-align: right;
+}
+.list-box > .list > .item > .content-box > .read-more-box > .read-more {
+    background-color: var(--nkw-neumorphism-bg-color-theme-light);
+    border: var(--nkw-neumorphism-border-light);
+    border-radius: var(--nkw-neumorphism-border-radius);
+    box-shadow: var(--nkw-neumorphism-box-shadow-light);
+    box-sizing: border-box;
+    color: var(--nkw-neumorphism-color-theme-light);
+    font-size: 0.85em;
+    font-weight: bold;
+    margin: 10px;
+    padding: 10px;
+}
+.list-box > .list > .item > .content-box > .read-more-box > .read-more:hover {
+    box-shadow: var(--nkw-neumorphism-box-shadow-inset-light);
+    transition: box-shadow 0.3s ease-in-out;
 }
 
 

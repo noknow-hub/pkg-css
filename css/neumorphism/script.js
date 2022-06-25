@@ -61,8 +61,9 @@ class Neumorphism {
 //////////////////////////////////////////////////////////////////////
 // Initialize.
 //////////////////////////////////////////////////////////////////////
-document.addEventListener('readystatechange', (event) => {
-  if(event.target.readyState === 'complete') {
-    new Neumorphism().Run();
-  }
-});
+const myInterval = setInterval(() => {
+    if(document.readyState === 'complete') {
+        clearInterval(myInterval);
+        new Neumorphism().Run();
+    }
+}, 100);
