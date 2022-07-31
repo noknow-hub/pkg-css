@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+
+/**********************************************************************
+ Accordion box
+
+ [HTML]
+ <div class="c-accordion-box">
+   <ul class="list">
+     <li class="item active">
+       <h3 class="heading has-content"><time class="date">2022/05/13</time> TITLE</h3>
+       <p class="content">TEXT</p>
+     </li>
+     <li>
+       <h3 class="heading has-content">MORE</h3>
+       <ul class="list content">
+         <li class="item">
+           <h3 class="heading"><time class="date">2022/05/13</time> TITLE</h3>
+           <p class="content">TEXT</p>
+         </li>
+       </ul>
+     </li>
+   </ul>
+ </div>
+**********************************************************************/
+
+
