@@ -18,6 +18,7 @@
     --nkw-color-sns-discord: #5865F2;
     --nkw-color-sns-facebook: #3b5999;
     --nkw-color-sns-hatena-bookmark: #00a5de;
+    --nkw-color-sns-instagram: #262626;
     --nkw-color-sns-line: #00c300;
     --nkw-color-sns-linkedin: #0077B5;
     --nkw-color-sns-pinterest: #bd081c;
@@ -45,6 +46,11 @@
     --nkw-line-height-small: 1.0;
     --nkw-line-height-medium: 1.5;
     --nkw-line-height-large: 2.0;
+    --nkw-side-menu-box-font-size-list-title: 0.9rem;
+    --nkw-side-menu-box-font-size-list-item: 0.8rem;
+    --nkw-side-menu-box-height: 36px;
+    --nkw-side-menu-box-background-color-hover-item: #e8e8e8;
+    --nkw-side-menu-box-border-sub-list: 3px solid #6c757d;
 }
 
 
@@ -64,6 +70,84 @@
     -webkit-align-items: flex-end;
     -moz-align-items: flex-end;
     align-items: flex-end;
+}
+
+
+/**********************************************************************
+ article
+**********************************************************************/
+.article h1 {
+    font-size: var(--nkw-h1-font-size);
+    margin: 50px 0;
+}
+.article h2 {
+    font-size: var(--nkw-h2-font-size);
+    margin: 120px 0 20px;
+}
+.article h3 {
+    font-size: var(--nkw-h3-font-size);
+    margin: 60px 0 20px;
+}
+.article h4 {
+    font-size: var(--nkw-h4-font-size);
+    margin: 40px 0 20px;
+}
+.article ul,
+.article ol {
+    margin: 20px 0 40px 40px;
+}
+.article ul {
+    list-style-type: disc;
+}
+.article ul ul {
+    list-style-type: circle;
+    margin: 0 0 0 40px;
+}
+.article ul ul ul {
+    list-style-type: square;
+}
+.article ol {
+    list-style-type: decimal;
+}
+.article p {
+    line-height: var(--nkw-line-height-large);
+    margin-bottom: 40px;
+}
+.article * > p:last-child {
+    margin-bottom: unset;
+}
+.article a {
+    text-decoration: underline;
+    transition: opacity 0.3s ease-in-out;
+}
+.article a.button {
+    text-decoration: unset;
+    transition: box-shadow 0.3s ease-in-out;
+}
+.article a:hover {
+    opacity: 0.3;
+}
+.article a.button:hover {
+    opacity: unset;
+}
+.article strong {
+    color: var(--nkw-color-note);
+}
+.article img {
+    display: block;
+    max-height: 300px;
+    object-fit: contain;
+    width: 100%;
+}
+@media screen and (min-width: 768px) {
+    .article img {
+        max-height: 400px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .article img {
+        max-height: 500px;
+    }
 }
 
 
@@ -121,11 +205,73 @@
 
 
 /**********************************************************************
+ Button
+**********************************************************************/
+.button {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    box-sizing: border-box;
+    cursor: pointer; 
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    font-size: inherit;
+    font-weight: bold;
+    padding: 10px;
+}
+.button:hover {
+    
+}
+
+
+/**********************************************************************
  color
 **********************************************************************/
+.color-add {
+    color: var(--nkw-color-add);
+    fill: var(--nkw-color-add);
+}
 .color-comment {
     color: var(--nkw-color-comment);
     fill:  var(--nkw-color-comment);
+}
+.color-dark {
+    color: var(--nkw-color-dark);
+    fill: var(--nkw-color-dark);
+}
+.color-delete {
+    color: var(--nkw-color-delete);
+    fill: var(--nkw-color-delete);
+}
+.color-error {
+    color: var(--nkw-color-error);
+    fill: var(--nkw-color-error);
+}
+.color-info {
+    color: var(--nkw-color-info);
+    fill: var(--nkw-color-info);
+}
+.color-light {
+    color: var(--nkw-color-light);
+    fill: var(--nkw-color-light);
+}
+.color-link {
+    color: var(--nkw-color-link);
+    fill: var(--nkw-color-link);
+}
+.color-muted {
+    color: var(--nkw-color-muted);
+    fill: var(--nkw-color-muted);
+}
+.color-note {
+    color: var(--nkw-color-note);
+    fill: var(--nkw-color-note);
 }
 .color-sns-discord {
     color: var(--nkw-color-sns-discord);
@@ -138,6 +284,10 @@
 .color-sns-hatena-bookmark {
     color: var(--nkw-color-sns-hatena-bookmark);
     fill: var(--nkw-color-sns-hatena-bookmark);
+}
+.color-sns-instagram {
+    color: var(--nkw-color-sns-instagram);
+    fill: var(--nkw-color-sns-instagram);
 }
 .color-sns-line {
     color: var(--nkw-color-sns-line);
@@ -174,6 +324,18 @@
 .color-sns-weibo {
     color: var(--nkw-color-sns-weibo);
     fill: var(--nkw-color-sns-weibo);
+}
+.color-success {
+    color: var(--nkw-color-success);
+    fill: var(--nkw-color-success);
+}
+.color-update {
+    color: var(--nkw-color-update);
+    fill: var(--nkw-color-update);
+}
+.color-warning {
+    color: var(--nkw-color-warning);
+    fill: var(--nkw-color-warning);
 }
 
 
