@@ -175,6 +175,7 @@
     color: var(--nkw-neumorphism-color-theme-light);
     margin: 20px;
     padding: 20px;
+    width: calc(100% - 40px);
 }
 .section .box {
     margin: 20px auto;
@@ -245,8 +246,8 @@
 
  [HTML]
  <div class="console-box">
-   <span class="console-box__title"></span>
-   <pre class="console-box__console"></pre>
+   <span class="console-box--title"></span>
+   <pre class="console-box--console"></pre>
  </div>
 **********************************************************************/
 .console-box {
@@ -256,12 +257,25 @@
     box-shadow: var(--nkw-neumorphism-box-shadow-inset-light);
     color: var(--nkw-neumorphism-color-theme-light);
 }
-.console-box__title {
+.console-box--title {
     background-color: var(--nkw-neumorphism-bg-color-theme-light);
     border: var(--nkw-neumorphism-border-light);
     border-radius: var(--nkw-neumorphism-border-radius);
     box-shadow: var(--nkw-neumorphism-box-shadow-inset-light);
     color: var(--nkw-neumorphism-color-theme-light);
+}
+
+
+/**********************************************************************
+ Directory structure box
+**********************************************************************/
+.directory-structure-box--link {
+    background-color: unset !important;
+    box-shadow: var(--nkw-neumorphism-box-shadow-hover-off-light);
+}
+.directory-structure-box--link:hover {
+    box-shadow: var(--nkw-neumorphism-box-shadow-hover-on-light);
+    transition: box-shadow 0.3s ease-in-out;
 }
 
 

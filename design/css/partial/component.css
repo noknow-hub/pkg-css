@@ -187,9 +187,9 @@
  [HTML]
  <div class="breadcrumb-box">
    <nav>
-     <ul class="breadcrumb-box__list">
-       <li class="breadcrumb-box__item"><a href="" title="" class="breadcrumb-box__link">Level-1<a></li>
-       <li class="breadcrumb-box__item">Level-2</li>
+     <ul class="breadcrumb-box--list">
+       <li class="breadcrumb-box--item"><a href="" title="" class="breadcrumb-box--link">Level-1<a></li>
+       <li class="breadcrumb-box--item">Level-2</li>
      </<ul>
    </nav>
  </div>
@@ -204,7 +204,7 @@
     position: relative;
     width: 100%;
 }
-.breadcrumb-box__list {
+.breadcrumb-box--list {
     -webkit-align-items: center;
     align-items: center;
     display: -webkit-flex;
@@ -216,7 +216,7 @@
     position: relative;
     width: 100%;
 }
-.breadcrumb-box__item {
+.breadcrumb-box--item {
     -webkit-align-items: center;
     align-items: center;
     display: -webkit-flex;
@@ -224,12 +224,12 @@
     font-size: 0.75em;
     margin: 3px;
 }
-.breadcrumb-box__item:nth-child(n + 2)::before {
+.breadcrumb-box--item:nth-child(n + 2)::before {
     content: '>';
     display: block;
     margin: 0 7px;
 }
-.breadcrumb-box__link {
+.breadcrumb-box--link {
     color: var(--nkw-color-link);
     display: block;
     font-weight: bold;
@@ -405,7 +405,7 @@
 }
 .card-view-box--excerpt {
     font-size: 0.9em;
-    line-height: 1.25;
+    line-height: 1.5;
     margin: 0;
     opacity: 0.8;
     padding: 0;
@@ -479,22 +479,23 @@
 
  [HTML]
  <div class="console-box">
-   <span class="console-box__title"></span>
-   <pre class="console-box__console"></pre>
+   <span class="console-box--title"></span>
+   <pre class="console-box--console"></pre>
  </div>
 **********************************************************************/
 .console-box {
     box-sizing: border-box;
     margin: 20px auto;
     padding: 20px;
+    width: 100%;
 }
-.console-box__title {
+.console-box--title {
     box-sizing: border-box;
     display: inline-block;
     margin-bottom: 10px;
     padding: 5px 10px;
 }
-.console-box__console {
+.console-box--console {
     font-family: Consolas, Menlo, 'Liberation Mono', Courier, Monaco, monospace;
     font-size: 0.9em;
     line-height: 1.5;
@@ -502,7 +503,7 @@
     word-break: break-all;
 }
 @media screen and (min-width: 768px) {
-    .console-box__console {
+    .console-box--console {
         font-size: 0.8em;
     }
 }
@@ -515,15 +516,17 @@
  <div class="directory-structure-box">
    <nav>
      <ul class="directory-structure-box--list">
-       <li class="directory-structure-box--item">
-         <a class="directory-structure-box--link" href="">LINK</a>
+       <li class="directory-structure-box--heading-item">
+         <a class="directory-structure-box--link" href="">
+           <p class="directory-structure-box--txt">LINK</p>
+         </a>
        </li>
        <li class="directory-structure-box--item">
          <span class="directory-structure-box--title">TITLE</span>
        </li>
        <li class="directory-structure-box--item--drop-down active">
          <p class="directory-structure-box--with-icon">
-           <svg class=""directory-structure-box--pre-icon></svg>
+           <svg class="directory-structure-box--pre-icon"></svg>
            <span class="directory-structure-box--title">TITLE</span>
          </p>
        </li>
@@ -553,81 +556,93 @@
         padding: 20px;
     }
 }
-.directory-structure-box--list,
-.directory-structure-box--sub-list {
+.directory-structure-box .directory-structure-box--list,
+.directory-structure-box .directory-structure-box--sub-list {
     box-sizing: border-box;
     list-style: none;
     margin: 0;
     padding: 0;
     width: 100%;
 }
-.directory-structure-box--sub-list {
+.directory-structure-box .directory-structure-box--sub-list {
     border-left: 3px solid var(--nkw-color-muted);
+    list-style-type: none;
     margin-left: 1.0rem;
     padding-left: 3px;
     width: calc(100% - 1.0rem);
 }
-.directory-structure-box--item--drop-down + .directory-structure-box--sub-list {
+.directory-structure-box .directory-structure-box--item--drop-down + .directory-structure-box--sub-list {
     height: 0;
     overflow: hidden;
 }
-.directory-structure-box--item--drop-down.active + .directory-structure-box--sub-list {
+.directory-structure-box .directory-structure-box--item--drop-down.active + .directory-structure-box--sub-list {
     height: auto;
 }
-.directory-structure-box--item,
-.directory-structure-box--item--drop-down {
+.directory-structure-box .directory-structure-box--item,
+.directory-structure-box .directory-structure-box--item,
+.directory-structure-box .directory-structure-box--item--drop-down {
     -webkit-align-items: center;
     align-items: center;
-    border-radius: var(--nkw-border-radius);
     box-sizing: border-box;
     color: inherit;
     display: -webkit-flex;
     display: flex;
     font-size: 0.95em;
     line-height: 1.25;
-    margin: 0;
     min-height: 36px;
-    padding: 0;
+    padding: 3px;
     text-decoration: none;
 }
-.directory-structure-box--item.active,
-.directory-structure-box--item--drop-down.active {
+.directory-structure-box .directory-structure-box--item.active,
+.directory-structure-box .directory-structure-box--item--drop-down.active {
     margin-bottom: 0.5em;
 }
-.directory-structure-box--item--drop-down {
+.directory-structure-box .directory-structure-box--item--drop-down {
     cursor: pointer;
 }
-.directory-structure-box--link {
-    margin: 3px 0;
-    padding: 7px;
+.directory-structure-box .directory-structure-box--link {
+    border-radius: var(--nkw-border-radius);
+    width: 100%;
 }
-.directory-structure-box--title {
-    font-size: 1.1em;
-    font-weight: bold;
-    margin: 1.5rem 0 0;
-    padding: 7px;
-}
-.directory-structure-box--with-icon {
+.directory-structure-box .directory-structure-box--heading {
     -webkit-align-items: center;
     align-items: center;
+    box-sizing: border-box;
     display: -webkit-flex;
     display: flex;
-    width: calc(100% - var(--nkw-icon-size-m) - 5px);
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 7px;
 }
-.directory-structure-box--with-post-icon {
+.directory-structure-box .directory-structure-box--txt {
+    -webkit-align-items: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    padding: 7px;
+}
+.directory-structure-box .directory-structure-box--txt-tag {
+    font-size: 0.75em;
+    margin: 0 3px;
+    opacity: 0.7;
+}
+.directory-structure-box .directory-structure-box--with-post-icon {
     margin: 3px 0;
     padding: 7px;
 }
-.directory-structure-box--pre-icon,
-.directory-structure-box--post-icon {
+.directory-structure-box .directory-structure-box--pre-icon,
+.directory-structure-box .directory-structure-box--post-icon {
     fill: inherit;
-    height: var(--nkw-icon-size-m);
-    width: var(--nkw-icon-size-m);
+    height: var(--nkw-icon-size-medium);
+    min-width: var(--nkw-icon-size-medium);
+    width: var(--nkw-icon-size-medium);
 }
-.directory-structure-box--pre-icon {
+.directory-structure-box .directory-structure-box--pre-icon {
     margin-right: 5px;
 }
-.directory-structure-box--post-icon {
+.directory-structure-box .directory-structure-box--post-icon {
     margin-left: 5px;
 }
 
@@ -868,9 +883,6 @@
            <span class="horizontal-list-box--tag"></span>
          </div>
          <p class="horizontal-list-box--excerpt"></p>
-         <div class="horizontal-list-box--read-more-box">
-           <a class="horizontal-list-box--read-more" href="">Read more</a>
-         </div>
        </div>
      </li>
      ...
@@ -913,10 +925,15 @@
 .horizontal-list-box--title {
     font-size: 1.15em;
     font-weight: bold;
+    text-decoration: underline;
+    transition: opacity 0.3s ease-in-out;
+}
+.horizontal-list-box--title:hover {
+    opacity: 0.7;
 }
 .horizontal-list-box--excerpt {
     font-size: 0.9em;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 .horizontal-list-box--attr-box {
     -webkit-box-align: center;
@@ -926,7 +943,6 @@
     align-items: center;
     display: -webkit-flex;
     display: flex;
-    margin-top: 5px;
 }
 .horizontal-list-box--attr {
     font-size: 0.8em;
@@ -956,7 +972,7 @@
  Profile card box
 
  [HTML]
- <div class="profile-card-box [u-round] [u-wrap]">
+ <div class="profile-card-box [round] [wrap]">
    <div class="profile-card-box--icon-box">
      <img class="profile-card-box--icon" alt="" src="" loading="lazy">
      or
@@ -1019,17 +1035,17 @@
     width: 100%;
     z-index: 1;
 }
-.profile-card-box.u-round > .profile-card-box--img-header-box {
+.profile-card-box.round > .profile-card-box--img-header-box {
     border-top-right-radius: var(--nkw-border-radius);
     border-top-left-radius: var(--nkw-border-radius);
     box-sizing: border-box;
     overflow: hidden;
 }
 @media screen and (min-width: 600px) {
-    .profile-card-box.u-wrap > .profile-card-box--img-header-box {
+    .profile-card-box.wrap > .profile-card-box--img-header-box {
         height: 100%;
     }
-    .profile-card-box.wrap.u-round > .profile-card-box--img-header-box {
+    .profile-card-box.wrap.round > .profile-card-box--img-header-box {
         border-top-right-radius: unset;
         border-bottom-left-radius: var(--nkw-border-radius);
     }
@@ -1049,13 +1065,13 @@
     width: 100%;
     z-index: 1;
 }
-.profile-card-box.u-round > .profile-card-box--content-box {
+.profile-card-box.round > .profile-card-box--content-box {
     border-bottom-left-radius: var(--nkw-border-radius);
     border-bottom-right-radius: var(--nkw-border-radius);
     overflow: hidden;
 }
 @media screen and (min-width: 600px) {
-    .profile-card-box.u-wrap > .profile-card-box--content-box {
+    .profile-card-box.wrap > .profile-card-box--content-box {
         display: -webkit-flex;
         display: flex;
         flex-direction: column;
@@ -1065,7 +1081,7 @@
         padding-top: unset;
     }
 }
-.profile-card-box.wrap.u-round > .profile-card-box--content-box {
+.profile-card-box.wrap.round > .profile-card-box--content-box {
     border-bottom-left-radius: unset;
     border-top-right-radius: var(--nkw-border-radius);
 }
@@ -1125,7 +1141,7 @@
  <div class="form-group-box">
    <label class="form-group-box--label"></label>
    <input class="form-group-box--input" name="" type="">
-   <p class="form-group-box--note color-error [u-active]"></p>
+   <p class="form-group-box--note color-error [active]"></p>
  </div>
  <div class="form-group-box">
    <label class="form-group-box--label"></label>
@@ -1133,7 +1149,7 @@
      <option value=""></option>
      <option value=""></option>
    </select>
-   <p class="form-group-box--note color-error [u-active]"></p>
+   <p class="form-group-box--note color-error [active]"></p>
  </div>
  <div class="form-group-box">
    <label class="form-group-box--label"></label>
@@ -1169,7 +1185,7 @@
     margin-top: 5px;
     word-break: break-all;
 }
-.form-group-box--note.u-active {
+.form-group-box--note.active {
     display: inline-block;
 }
 .form-group-box--icon-input-box {
@@ -1237,129 +1253,6 @@
 }
 .form-group-box--icon-input-box--post-icon {
     right: 0;
-}
-
-
-/**********************************************************************
- Side menu box
-
- [HTML]
- <div class="side-menu-box">
-   <nav class="side-menu-box--nav">
-     <ul class="side-menu-box--list">
-       <li class="side-menu-box--item">
-         <svg class="side-menu-box--item--pre-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
-         <span class="side-menu-box--item--title"></span>
-       </li>
-       <li class="side-menu-box--item">
-         <a class="side-menu-box--item--link" href=""></a>
-         <svg class="side-menu-box--item--post-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
-       </li>
-       <li class="side-menu-box--drop-down-item [rotate]">
-         <span class="side-menu-box--item--title"></span>
-         <svg class="side-menu-box--item--post-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
-       </li>
-       <ul class="side-menu-box--sub-list">
-         <li>
-           ...
-         </li>
-       </ul>
-     </ul>
-   </nav>
- </div>
-**********************************************************************/
-.side-menu-box {
-    -webkit-align-items: center;
-    align-items: center;
-    box-sizing: border-box;
-    display: -webkit-flex;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 100%;
-}
-.side-menu-box--nav {
-    background-color: #fff;
-    box-sizing: border-box;
-    padding: 10px;
-    width: calc(100% - 40px);
-}
-.side-menu-box--list {
-    box-sizing: border-box;
-    margin: 0;
-    width: 100%;
-}
-.side-menu-box--item,
-.side-menu-box--drop-down-item {
-    -webkit-align-items: center;
-    align-items: center;
-    border-radius: var(--nkw-border-radius);
-    box-sizing: border-box;
-    color: inherit;
-    display: -webkit-flex;
-    display: flex;
-    font-size: var(--nkw-side-menu-box-font-size-list-item);
-    line-height: 1.25;
-    min-height: var(--nkw-side-menu-box-height);
-    margin: 3px 0;
-    padding: 7px;
-    text-decoration: none;
-}
-.side-menu-box--item--title {
-    font-size: var(--nkw-side-menu-box-font-size-list-title);
-    font-weight: bold;
-    margin: 1.5rem 0 0;
-}
-.side-menu-box--item--title.active {
-    margin-bottom: 0.5em;
-}
-.side-menu-box--item--link {
-    transition: all 0.3s;
-}
-.side-menu-box--item--link:hover {
-    background-color: var(--nkw-side-menu-box-background-color-hover-item);
-}
-.side-menu-box--sub-list {
-    border-left: var(--nkw-side-menu-box-border-sub-list);
-    box-sizing: border-box;
-    margin-left: 1.0rem !important;
-    padding-left: 3px;
-    width: calc(100% - 1.0rem);
-}
-.side-menu-box--drop-down-item + .side-menu-box--sub-list {
-    height: 0;
-    overflow: hidden;
-}
-.side-menu-box--drop-down-item.active + .side-menu-box--sub-list {
-    height: auto;
-}
-.side-menu-box--drop-down-item {
-    cursor: pointer;
-}
-.side-menu-box--item--pre-icon,
-.side-menu-box--item--post-icon {
-    fill: inherit;
-    height: var(--nkw-icon-size-medium);
-    width: var(--nkw-icon-size-medium);
-}
-.side-menu-box--item--pre-icon {
-    margin-right: 5px;
-}
-.side-menu-box--item--post-icon {
-    margin-left: 5px;
-}
-.side-menu-box--drop-down-item > .side-menu-box--item--pre-icon.rotate,
-.side-menu-box--drop-down-item > .side-menu-box--item--post-icon.rotate {
-    -webkit-transform: rotateX(0);
-    -moz-transform: rotateX(0);
-    transform: rotateX(0);
-    transition: all 0.3s;
-}
-.side-menu-box--drop-down-item.active > .side-menu-box--item--pre-icon.rotate,
-.side-menu-box--drop-down-item.active > .side-menu-box--item--post-icon.rotate {
-    -webkit-transform: rotateX(180deg);
-    -moz-transform: rotateX(180deg);
-    transform: rotateX(180deg);
 }
 
 
