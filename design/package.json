@@ -1,0 +1,24 @@
+{
+  "author": "noknow",
+  "bugs": {
+    "url": "https://github.com/noknow-hub/pkg-css/issues"
+  },
+  "description": "CSS utilities",
+  "homepage": "https://github.com/noknow-hub/pkg-css/blob/main/design/README.md",
+  "license": "MIT",
+  "main": "index.js",
+  "name": "@noknow/design",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noknow-hub/pkg-css.git",
+    "directory": "design"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "version": "0.1.0"
+}
