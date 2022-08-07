@@ -1,7 +1,7 @@
 //////////////////////////////////////////////////////////////////////
-// script.js
+// accordion.js
 //////////////////////////////////////////////////////////////////////
-class Script {
+class Accordion {
 
     //////////////////////////////////////////////////////////////////////
     // Constructor.
@@ -9,10 +9,12 @@ class Script {
     constructor() {
         this.classNameAccordionBox = 'accordion-box';
         this.classNameAccordionBoxHeading = 'heading';
+        this.classNameAccordionBoxHeadingBox = 'heading-box';
         this.classNameAccordionBoxHasContent = 'has-content';
-        this.classNameAccordionBoxContent = 'content';
+        this.classNameAccordionBoxContent = 'content-box';
         this.classNameAccordionBoxItem = 'item';
         this.classNameActive = 'active';
+        this.paddingTop = 10;
     }
 
 
@@ -30,7 +32,7 @@ class Script {
     async setUpForAccordingBox() {
         const accordionBoxElms = document.querySelectorAll(`.${this.classNameAccordionBox}`);
         for(let i = 0; i < accordionBoxElms.length; i++) {
-            const elms = accordionBoxElms[i].querySelectorAll(`.${this.classNameAccordionBoxHeading}.${this.classNameAccordionBoxHasContent}`);
+            const elms = accordionBoxElms[i].querySelectorAll(`.${this.classNameAccordionBoxHeadingBox}.${this.classNameAccordionBoxHasContent}`);
             if(elms === undefined || elms === null) {
                 continue;
             }
@@ -46,7 +48,7 @@ class Script {
                 elms[j].addEventListener('click', async () => {
                     elm.classList.toggle(this.classNameActive);
                     if(elm.classList.contains(this.classNameActive)) {
-                        contentElm.style.maxHeight = `${contentElm.scrollHeight}px`;
+                        contentElm.style.maxHeight = `${contentElm.scrollHeight + this.paddingTop}px`;
                     } else {
                         contentElm.style.maxHeight = '0px';
                     }
@@ -56,14 +58,4 @@ class Script {
     }
 
 }
-
-
-//////////////////////////////////////////////////////////////////////
-// Initialize.
-//////////////////////////////////////////////////////////////////////
-const myInterval = setInterval(() => {
-    if(document.readyState === 'complete') {
-        clearInterval(myInterval);
-        new Script().Run();
-    }
-}, 100);
+export { Accordion };

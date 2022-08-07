@@ -1,0 +1,166 @@
+@charset "UTF-8";
+
+@import '../foundation/style.css';
+
+
+/**********************************************************************
+ Directory
+
+ [HTML]
+ <nav class="directory">
+   <ul class="list">
+     <li class="item">
+       <a class="content link heading" href="">
+         <svg class="pre-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><use xlink:href=""/></svg>
+         <span>LINK</span>
+       </a>
+     </li>
+     <li class="item content heading drop-down active">
+       <svg class="pre-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><use xlink:href=""/></svg>
+       <span>TITLE</span>
+       <svg class="post-icon rotate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><use xlink:href=""/></svg>
+     </li>
+     <ul class="sub-list">
+       <li class="item">
+         <a class="content link" href="">LINK<span class="tag">TAG</span></a>
+       </li>
+       <li class="item">
+         <a class="content link" href="">LINK</a>
+       </li>
+       <li class="item content drop-down active">
+         <span>TITLE</span>
+         <svg class="post-icon rotate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><use xlink:href=""/></svg>
+       </li>
+       <ul class="sub-list">
+         <li class="item">
+           <a class="content link" href="">LINK</a>
+         </li>
+         <li class="item content drop-down active">
+           <span>TITLE</span>
+           <svg class="post-icon rotate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><use xlink:href=""/></svg>
+         </li>
+         <ul class="sub-list">
+           <li class="item">
+             <a class="content link" href="">LINK</a>
+           </li>
+         </ul>
+       </ul>
+     </ul>
+   </ul>
+ </nav>
+**********************************************************************/
+.directory {
+    background-color: var(--nkw-color-light-gray);
+    box-sizing: border-box;
+    margin: 20px auto;
+    padding: 10px;
+    width: calc(100% - 40px);
+}
+@media screen and (min-width: 600px) {
+    .directory {
+        padding: 20px;
+    }
+}
+.directory > .list,
+.directory .sub-list {
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.directory .sub-list {
+    border-left: 3px solid var(--nkw-color-muted);
+    list-style-type: none;
+    margin-left: 1.0rem;
+    padding-left: 3px;
+    width: calc(100% - 1.0rem);
+}
+.directory .item.drop-down + .sub-list {
+    height: 0;
+    overflow: hidden;
+}
+.directory .item.drop-down.active + .sub-list {
+    height: auto;
+}
+.directory .item {
+    text-decoration: none;
+}
+.directory .item.drop-down {
+    cursor: pointer;
+}
+.directory .item > .link {
+    -webkit-align-items: center;
+    align-items: center;
+    border-radius: var(--nkw-border-radius);
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    transition: opacity 0.3s ease-in-out;
+    width: 100%;
+}
+.directory .item > .link:hover {
+    opacity: 0.3;
+}
+.directory .item.content,
+.directory .item > .content {
+    -webkit-align-items: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 0.95em;
+    line-height: 1.25;
+    min-height: 36px;
+    padding: 7px;
+}
+.directory .item.content.heading,
+.directory .item > .content.heading {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.directory > .list > .item.content.heading:first-child,
+.directory > .list > .item:first-child > .content.heading {
+    margin-top: 0;
+}
+.directory .item > .pre-icon,
+.directory .item > .post-icon,
+.directory .item > .link > .pre-icon,
+.directory .item > .link > .post-icon {
+    fill: inherit;
+    height: var(--nkw-icon-size-medium);
+    min-width: var(--nkw-icon-size-medium);
+    width: var(--nkw-icon-size-medium);
+}
+.directory .item > .pre-icon,
+.directory .item > .link > .pre-icon {
+    margin-right: 5px;
+}
+.directory .item > .post-icon
+.directory .item > .link > .post-icon {
+    margin-left: 5px;
+}
+.directory .item.drop-down > .pre-icon.rotate,
+.directory .item.drop-down > .post-icon.rotate,
+.directory .item.drop-down > .link > .pre-icon.rotate,
+.directory .item.drop-down > .link > .post-icon.rotate {
+    -o-transform: rotateX(0);
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    transition: transform 0.3s ease-in-out;
+}
+.directory .item.drop-down.active > .pre-icon.rotate,
+.directory .item.drop-down.active > .post-icon.rotate,
+.directory .item.drop-down.active > .link > .pre-icon.rotate,
+.directory .item.drop-down.active > .link > .post-icon.rotate {
+    -o-transform: rotateX(180deg);
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+.directory .item.content .tag,
+.directory .item > .content .tag {
+    font-size: 0.75em;
+    margin: 0 3px;
+    color: var(--nkw-color-gray);
+}
