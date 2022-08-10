@@ -3,6 +3,7 @@
 //////////////////////////////////////////////////////////////////////
 import { Accordion } from './component/accordion.js';
 import { Directory } from './component/directory.js';
+import { Table } from './component/table.js';
 
 class ScriptFull {
 

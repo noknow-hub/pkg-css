@@ -4,6 +4,7 @@
     --nkw-border-radius: 7px;
     --nkw-color-comment: #008000;
     --nkw-color-dark: #212529;
+    --nkw-color-dark-gray: #4C4E52;
     --nkw-color-error: #dc3545;
     --nkw-color-gray: #6c757d;
     --nkw-color-info: #17a2b8;
@@ -53,4 +54,7 @@
     --nkw-side-menu-box-height: 36px;
     --nkw-side-menu-box-background-color-hover-item: #e8e8e8;
     --nkw-side-menu-box-border-sub-list: 3px solid #6c757d;
+    --nkw-table-bg-color-even: #f8f9fa;
+    --nkw-table-bg-color-hover: #ededed;
+    --nkw-table-footer-box-color: #6d6f73;
 }
