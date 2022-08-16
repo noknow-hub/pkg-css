@@ -6,6 +6,8 @@
     --nkw-color-dark: #212529;
     --nkw-color-dark-gray: #4C4E52;
     --nkw-color-error: #dc3545;
+    --nkw-color-form-border: #919191;
+    --nkw-color-form-icon: #919191;
     --nkw-color-gray: #6c757d;
     --nkw-color-info: #17a2b8;
     --nkw-color-light: #e8eaed;
@@ -15,9 +17,6 @@
     --nkw-color-warning: #ffc107;
     --nkw-color-link: #007bff;
     --nkw-color-note: #e66572;
-    --nkw-color-add: #28a745;
-    --nkw-color-update: #ffc107;
-    --nkw-color-delete: #dc3545;
     --nkw-color-sns-discord: #5865F2;
     --nkw-color-sns-facebook: #3b5999;
     --nkw-color-sns-hatena-bookmark: #00a5de;
@@ -31,6 +30,8 @@
     --nkw-color-sns-telegram: #0088cc;
     --nkw-color-sns-twitter: #55acee;
     --nkw-color-sns-weibo: #df2029;
+    --nkw-console-background-color: #f8f8f8;
+    --nkw-console-border: 1px solid #c6c8ca;
     --nkw-font-family-gothic: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
     --nkw-font-family-mincho: font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
     --nkw-font-size: clamp(16px, 2vw, 20px);      /* 16px */

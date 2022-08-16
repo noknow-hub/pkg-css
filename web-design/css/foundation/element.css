@@ -125,6 +125,7 @@
     -webkit-align-items: center;
     -moz-align-items: center;
     align-items: center;
+    border: none;
     box-sizing: border-box;
     cursor: pointer;
     display: -webkit-box;
@@ -135,11 +136,43 @@
     display: flex;
     font-size: inherit;
     font-weight: bold;
-    padding: 10px;
+    -webkit-justify-content: center;
+    justify-content: center;
+    padding: 10px 20px;
+    transition: opacity 0.3s ease-in-out;
 }
 .button:hover {
-
+    opacity: 0.6;
 }
+.button.dark {
+    background-color: var(--nkw-color-dark);
+    color: #fff;
+    fill: #fff;
+}
+.button.error {
+    background-color: var(--nkw-color-error);
+    color: #fff;
+    fill: #fff;
+}
+.button.info {
+    background-color: var(--nkw-color-info);
+    color: #fff;
+    fill: #fff;
+}
+.button.light {
+    background-color: var(--nkw-color-light);
+}
+.button.success {
+    background-color: var(--nkw-color-success);
+    color: #fff;
+    fill: #fff;
+}
+.button.warning {
+    background-color: var(--nkw-color-warning);
+    color: #fff;
+    fill: #fff;
+}
+
 
 
 /**********************************************************************

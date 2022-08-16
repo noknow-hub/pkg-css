@@ -1131,6 +1131,31 @@
 
 
 /**********************************************************************
+ Size
+**********************************************************************/
+.size-icon-x-large {
+    height: var(--nkw-icon-size-x-large);
+    width: var(--nkw-icon-size-x-large);
+}
+.size-icon-large {
+    height: var(--nkw-icon-size-large);
+    width: var(--nkw-icon-size-large);
+}
+.size-icon-medium {
+    height: var(--nkw-icon-size-medium);
+    width: var(--nkw-icon-size-medium);
+}
+.size-icon-small {
+    height: var(--nkw-icon-size-small);
+    width: var(--nkw-icon-size-small);
+}
+.size-icon-x-small {
+    height: var(--nkw-icon-size-x-small);
+    width: var(--nkw-icon-size-x-small);
+}
+
+
+/**********************************************************************
  text-align
 **********************************************************************/
 .text-align-center {

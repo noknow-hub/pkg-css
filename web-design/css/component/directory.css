@@ -11,14 +11,16 @@
    <ul class="list">
      <li class="item">
        <a class="content link heading" href="">
-         <svg class="pre-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><use xlink:href=""/></svg>
+         <svg class="pre-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><use xlink:href="/icons.svg#home"/></svg>
          <span>LINK</span>
        </a>
      </li>
-     <li class="item content heading drop-down active">
-       <svg class="pre-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><use xlink:href=""/></svg>
-       <span>TITLE</span>
-       <svg class="post-icon rotate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><use xlink:href=""/></svg>
+     <li class="item drop-down active">
+       <p class="content heading">
+         <svg class="pre-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><use xlink:href="/icons.svg#home"/></svg>
+         <span class="title">TITLE</span>
+         <svg class="post-icon rotate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><use xlink:href="/icons.svg#arrowDown"/></svg>
+       </p>
      </li>
      <ul class="sub-list">
        <li class="item">
@@ -27,17 +29,20 @@
        <li class="item">
          <a class="content link" href="">LINK</a>
        </li>
-       <li class="item content drop-down active">
-         <span>TITLE</span>
-         <svg class="post-icon rotate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><use xlink:href=""/></svg>
+       <li class="item drop-down active">
+         <p class="content drop-down active">
+           <span>TITLE</span>
+           <svg class="post-icon rotate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><use xlink:href="/icons.svg#arrowDown"/></svg>
+         </p>
        </li>
        <ul class="sub-list">
          <li class="item">
            <a class="content link" href="">LINK</a>
          </li>
-         <li class="item content drop-down active">
-           <span>TITLE</span>
-           <svg class="post-icon rotate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><use xlink:href=""/></svg>
+         <li class="item">
+           <p class="content">
+             <span>TITLE</span>
+           </p>
          </li>
          <ul class="sub-list">
            <li class="item">
@@ -46,6 +51,12 @@
          </ul>
        </ul>
      </ul>
+     <li class="item">
+       <a class="content link heading" href="">
+         <svg class="pre-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><use xlink:href="/icons.svg#home"/></svg>
+         <span>LINK</span>
+       </a>
+     </li>
    </ul>
  </nav>
 **********************************************************************/
@@ -73,37 +84,25 @@
     border-left: 3px solid var(--nkw-color-muted);
     list-style-type: none;
     margin-left: 1.0rem;
+    overflow: hidden;
     padding-left: 3px;
     width: calc(100% - 1.0rem);
 }
-.directory .item.drop-down + .sub-list {
+.directory > .list > .item.drop-down + .sub-list,
+.directory .sub-list > .item.drop-down + .sub-list {
     height: 0;
     overflow: hidden;
 }
-.directory .item.drop-down.active + .sub-list {
+.directory > .list > .item.drop-down.active + .sub-list,
+.directory .sub-list > .item.drop-down.active + .sub-list {
     height: auto;
 }
-.directory .item {
-    text-decoration: none;
-}
-.directory .item.drop-down {
+.directory > .list > .item.drop-down,
+.directory .sub-list > .item.drop-down {
     cursor: pointer;
 }
-.directory .item > .link {
-    -webkit-align-items: center;
-    align-items: center;
-    border-radius: var(--nkw-border-radius);
-    box-sizing: border-box;
-    display: -webkit-flex;
-    display: flex;
-    transition: opacity 0.3s ease-in-out;
-    width: 100%;
-}
-.directory .item > .link:hover {
-    opacity: 0.3;
-}
-.directory .item.content,
-.directory .item > .content {
+.directory > .list > .item > .content,
+.directory .sub-list > .item > .content {
     -webkit-align-items: center;
     align-items: center;
     box-sizing: border-box;
@@ -114,52 +113,61 @@
     min-height: 36px;
     padding: 7px;
 }
-.directory .item.content.heading,
-.directory .item > .content.heading {
+.directory > .list > .item > .content.link,
+.directory .sub-list > .item > .content.link {
+    text-decoration: none;
+    transition: opacity 0.3s ease-in-out;
+}
+.directory > .list > .item > .content.link:hover,
+.directory .sub-list > .item > .content.link:hover {
+    opacity: 0.3;
+}
+.directory > .list > .item > .content.heading,
+.directory .sub-list > .item > .content.heading {
     font-size: 1.1em;
     font-weight: bold;
-    margin-top: 20px;
+    margin-top: 10px;
 }
-.directory > .list > .item.content.heading:first-child,
-.directory > .list > .item:first-child > .content.heading {
+.directory > .list > .item:first-child > .content.heading,
+.directory .sub-list > .item:first-child > .content.heading {
     margin-top: 0;
 }
-.directory .item > .pre-icon,
-.directory .item > .post-icon,
-.directory .item > .link > .pre-icon,
-.directory .item > .link > .post-icon {
+.directory > .list > .item > .content > .pre-icon,
+.directory > .list > .item > .content > .post-icon,
+.directory .sub-list > .item > .content > .pre-icon,
+.directory .sub-list > .item > .content > .post-icon {
     fill: inherit;
     height: var(--nkw-icon-size-medium);
     min-width: var(--nkw-icon-size-medium);
     width: var(--nkw-icon-size-medium);
 }
-.directory .item > .pre-icon,
-.directory .item > .link > .pre-icon {
+.directory > .list > .item > .content > .pre-icon,
+.directory .sub-list > .item > .content > .pre-icon {
     margin-right: 5px;
 }
-.directory .item > .post-icon
-.directory .item > .link > .post-icon {
+.directory > .list > .item > .content > .post-icon,
+.directory .sub-list > .item > .content > .post-icon {
     margin-left: 5px;
 }
-.directory .item.drop-down > .pre-icon.rotate,
-.directory .item.drop-down > .post-icon.rotate,
-.directory .item.drop-down > .link > .pre-icon.rotate,
-.directory .item.drop-down > .link > .post-icon.rotate {
+.directory > .list > .item.drop-down > .content > .pre-icon.rotate,
+.directory > .list > .item.drop-down > .content > .post-icon.rotate,
+.directory .sub-list > .item.drop-down > .content > .pre-icon.rotate,
+.directory .sub-list > .item.drop-down > .content > .post-icon.rotate {
     -o-transform: rotateX(0);
     -webkit-transform: rotateX(0);
     transform: rotateX(0);
     transition: transform 0.3s ease-in-out;
 }
-.directory .item.drop-down.active > .pre-icon.rotate,
-.directory .item.drop-down.active > .post-icon.rotate,
-.directory .item.drop-down.active > .link > .pre-icon.rotate,
-.directory .item.drop-down.active > .link > .post-icon.rotate {
+.directory > .list > .item.drop-down.active > .content > .pre-icon.rotate,
+.directory > .list > .item.drop-down.active > .content > .post-icon.rotate,
+.directory .sub-list > .item.drop-down.active > .content > .pre-icon.rotate,
+.directory .sub-list > .item.drop-down.active > .content > .post-icon.rotate {
     -o-transform: rotateX(180deg);
     -webkit-transform: rotateX(180deg);
     transform: rotateX(180deg);
 }
-.directory .item.content .tag,
-.directory .item > .content .tag {
+.directory > .list > .item > .content > .tag,
+.directory .sub-list > .item > .content > .tag {
     font-size: 0.75em;
     margin: 0 3px;
     color: var(--nkw-color-gray);

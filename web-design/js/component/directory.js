@@ -8,9 +8,11 @@ class Directory {
     //////////////////////////////////////////////////////////////////////
     constructor() {
         this.classNameDirectory = 'directory';
+        this.classNameContent = 'content';
         this.classNameItem = 'item';
         this.classNameDropDown = 'drop-down';
         this.classNameActive = 'active';
+        this.classNameSubList = 'sub-list';
     }
 
 

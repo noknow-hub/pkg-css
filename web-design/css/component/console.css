@@ -9,15 +9,16 @@
  [HTML]
  <div class="console-box">
    <span class="title"></span>
-   <pre class="console"></pre>
+   <pre class="console"><code class="code"></code></pre>
  </div>
 **********************************************************************/
 .console-box {
-    background-color: var(--nkw-color-light-gray);
+    background-color: var(--nkw-console-background-color);
+    border: var(--nkw-console-border);
     box-sizing: border-box;
-    margin: 20px;
+    margin: 20px 0;
     padding: 10px;
-    width: calc(100% - 40px);
+    width: 100%;
 }
 .console-box > .title {
     box-sizing: border-box;
@@ -39,4 +40,12 @@
     .console-box > .console {
         font-size: 0.75em;
     }
+}
+.console-box > .console > .code {
+    display: block;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    white-space: pre-wrap;
+    word-break: break-all;
 }
