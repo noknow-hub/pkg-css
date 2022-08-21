@@ -21,6 +21,23 @@
 
 
 /**********************************************************************
+ border-bottom
+**********************************************************************/
+.border-bottom-1px-inset {
+    border-bottom: 1px inset;
+}
+.border-bottom-2px-inset {
+    border-bottom: 2px inset;
+}
+.border-bottom-3px-inset {
+    border-bottom: 3px inset;
+}
+.border-bottom-1px-solid {
+    border-bottom: 1px solid;
+}
+
+
+/**********************************************************************
  border-radius
 **********************************************************************/
 .border-radius {
@@ -42,6 +59,10 @@
 .color-add {
     color: var(--nkw-color-add);
     fill: var(--nkw-color-add);
+}
+.color-command {
+    color: var(--nkw-color-command);
+    fill:  var(--nkw-color-command);
 }
 .color-comment {
     color: var(--nkw-color-comment);
@@ -163,6 +184,9 @@
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+}
+.display-none {
+    display: none;
 }
 
 
@@ -298,6 +322,14 @@
     .font-size-xx-small-important-media-min-width-1200 { font-size: 0.7em !important; }
     .font-size-xxx-small-media-min-width-1200 { font-size: 0.6em; }
     .font-size-xxx-small-important-media-min-width-1200 { font-size: 0.6em !important; }
+}
+
+
+/**********************************************************************
+ font-weight
+**********************************************************************/
+.font-weight-bold {
+    font-weight: bold;
 }
 
 

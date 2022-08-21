@@ -51,12 +51,12 @@
 }
 @media screen and (min-width: 600px) {
     .image-box {
-        height: 350px;
+        max-height: 350px;
     }
 }
 @media screen and (min-width: 768px) {
     .image-box {
-        height: 450px;
+        max-height: 450px;
     }
 }
 .image-box .img {

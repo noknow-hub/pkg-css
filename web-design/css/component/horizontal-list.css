@@ -127,9 +127,10 @@
     box-sizing: border-box;
     color: #fff;
     font-size: 0.7em;
+    line-height: 1.0;
     margin-left: 5px;
     opacity: 0.6;
-    padding: 0 5px;
+    padding: 3px 6px;
 }
 .horizontal-list > .item > .content-box > .attr-box > *:first-child,
 .horizontal-list > .item > .content-box > .link > .attr-box > *:first-child {

@@ -2,6 +2,7 @@
 
 :root {
     --nkw-border-radius: 7px;
+    --nkw-color-command: #218f11;
     --nkw-color-comment: #008000;
     --nkw-color-dark: #212529;
     --nkw-color-dark-gray: #4C4E52;
@@ -9,6 +10,8 @@
     --nkw-color-form-border: #919191;
     --nkw-color-form-icon: #919191;
     --nkw-color-gray: #6c757d;
+    --nkw-color-default-border: #3b454e1a;
+    --nkw-color-default-text: #3b454e;
     --nkw-color-info: #17a2b8;
     --nkw-color-light: #e8eaed;
     --nkw-color-light-gray: #f9f9f9;
@@ -36,12 +39,12 @@
     --nkw-font-family-mincho: font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
     --nkw-font-size: clamp(16px, 2vw, 20px);      /* 16px */
     --nkw-header-height: 50px;
-    --nkw-h1-font-size: clamp(28px, 4vw, 36px);   /* 32px */
-    --nkw-h2-font-size: clamp(25px, 4vw, 33px);   /* 29px */
-    --nkw-h3-font-size: clamp(22px, 3vw, 30px);   /* 26px */
-    --nkw-h4-font-size: clamp(19px, 3vw, 27px);   /* 23px */
-    --nkw-h5-font-size: clamp(16px, 2vw, 24px); /* 20px */
-    --nkw-h6-font-size: clamp(16px, 2vw, 21px); /* 17px */
+    --nkw-h1-font-size: clamp(30px, 4vw, 38px);   /* 34px */
+    --nkw-h2-font-size: clamp(24px, 4vw, 32px);   /* 28px */
+    --nkw-h3-font-size: clamp(18px, 3vw, 26px);   /* 22px */
+    --nkw-h4-font-size: clamp(18px, 3vw, 20px);   /* 19px */
+    --nkw-h5-font-size: clamp(17px, 2vw, 18px);   /* 17.5px */
+    --nkw-h6-font-size: clamp(16px, 2vw, 17px);   /* 16.5px */
     --nkw-icon-size-x-large: 32px;
     --nkw-icon-size-large: 28px;
     --nkw-icon-size-medium: 24px;

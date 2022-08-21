@@ -83,11 +83,19 @@
  body
 **********************************************************************/
 .body {
+    color: var(--nkw-color-text);
+    fill: var(--nkw-color-text);
+    font-family: var(--nkw-font-family-gothic);
     font-size: var(--nkw-font-size);
     line-height: var(--nkw-line-height-medium);
     margin: 0;
     position: relative;
     width: 100%;
+}
+.body.default-color {
+    border-color: var(--nkw-color-default-border);
+    color: var(--nkw-color-default-text);
+    fill: var(--nkw-color-default-text);
 }
 @media screen and (min-width: 600px) {
     .body {
@@ -200,7 +208,6 @@
     font-size: var(--nkw-h6-font-size);
 }
 .h1, .h2, .h3, .h4, .h5, .h6 {
-    color: inherit;
     font-weight: bold;
     line-height: var(--nkw-line-height);
 }

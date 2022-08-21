@@ -28,7 +28,7 @@
 .accordion-box {
     box-sizing: border-box;
     margin: 20px;
-    padding: 20px;
+    padding: 10px;
 }
 .accordion-box > .list {
     list-style-type: none;

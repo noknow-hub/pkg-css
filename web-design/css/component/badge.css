@@ -27,6 +27,7 @@
     background-color: var(--nkw-color-light-gray);
     display: inline-block;
     font-size: 0.85em;
+    line-height: normal;
     margin: 2.5px;
     padding: 2.5px 10px;
 }
