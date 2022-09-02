@@ -150,6 +150,9 @@
     transition: transform 0.3s ease-in-out;
     width: 100%;
 }
+.card-list > .item .img-box .img.contain {
+    object-fit: contain;
+}
 .card-list > .item > .link:hover > .img-box .img {
     -ms-transform: scale(1.1);
     -webkit-transform: scale(1.1);

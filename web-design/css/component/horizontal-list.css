@@ -64,6 +64,9 @@
     object-fit: cover;
     width: 100%;
 }
+.horizontal-list > .item > .img-box .img.contain {
+    object-fit: contain;
+}
 .horizontal-list > .item > .img-box > .link .img {
     transition: filter, transform 0.3s ease-in-out;
 }
