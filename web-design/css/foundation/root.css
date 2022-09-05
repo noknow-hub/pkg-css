@@ -53,12 +53,13 @@
     --nkw-line-height-small: 1.0;
     --nkw-line-height-medium: 1.5;
     --nkw-line-height-large: 2.0;
+    --nkw-pricing-box-item-background-color: #f8f8f8;
     --nkw-side-menu-box-font-size-list-title: 0.9rem;
     --nkw-side-menu-box-font-size-list-item: 0.8rem;
     --nkw-side-menu-box-height: 36px;
     --nkw-side-menu-box-background-color-hover-item: #e8e8e8;
     --nkw-side-menu-box-border-sub-list: 3px solid #6c757d;
     --nkw-table-bg-color-even: #f8f9fa;
-    --nkw-table-bg-color-hover: #ededed;
+    --nkw-table-bg-color-hover: #fdfdfd;
     --nkw-table-footer-box-color: #6d6f73;
 }

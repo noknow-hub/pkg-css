@@ -248,8 +248,12 @@
 **********************************************************************/
 .img {
     display: block;
+    height: 100%;
     object-fit: cover;
     width: 100%;
+}
+.img.contain {
+    object-fit: contain;
 }
 
 
@@ -260,3 +264,23 @@
     margin: 20px auto;
     width: calc(100% - 40px);
 }
+
+
+/**********************************************************************
+ strong
+**********************************************************************/
+.strong {
+    font-size: bold;
+    position: relative;
+}
+.strong:before {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+    content: '';
+    height: 10px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+

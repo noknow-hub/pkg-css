@@ -10,7 +10,7 @@
  <div class="accordion-box">
    <ul class="list">
      <li class="item">
-       <div class="heading-box has-content">
+       <div class="heading-box">
          <time class="date">YYYY/MM/DD</time> 
          <h3 class="heading">HEADING TEXT HERE </h3>
        </div>
@@ -27,7 +27,7 @@
 **********************************************************************/
 .accordion-box {
     box-sizing: border-box;
-    margin: 20px;
+    margin: 20px auto;
     padding: 10px;
 }
 .accordion-box > .list {

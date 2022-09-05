@@ -21,6 +21,62 @@
 
 
 /**********************************************************************
+ background-color
+**********************************************************************/
+.background-color-command {
+    background-color: var(--nkw-color-command);
+    color: #ffffff;
+    fill:  #ffffff;
+}
+.background-color-comment {
+    background-color: var(--nkw-color-comment);
+    color: #ffffff;
+    fill:  #ffffff;
+}
+.background-color-dark {
+    background-color: var(--nkw-color-dark);
+    color: #ffffff;
+    fill:  #ffffff;
+}
+.background-color-error {
+    background-color: var(--nkw-color-error);
+    color: #ffffff;
+    fill:  #ffffff;
+}
+.background-color-info {
+    background-color: var(--nkw-color-info);
+    color: #ffffff;
+    fill:  #ffffff;
+}
+.background-color-light {
+    background-color: var(--nkw-color-light);
+    fill: var(--nkw-color-light);
+}
+.background-color-link {
+    background-color: var(--nkw-color-link);
+    fill: var(--nkw-color-link);
+}
+.background-color-muted {
+    background-color: var(--nkw-color-muted);
+    fill: var(--nkw-color-muted);
+}
+.background-color-note {
+    background-color: var(--nkw-color-note);
+    fill: var(--nkw-color-note);
+}
+.background-color-success {
+    background-color: var(--nkw-color-success);
+    color: #ffffff;
+    fill:  #ffffff;
+}
+.background-color-warning {
+    background-color: var(--nkw-color-warning);
+    color: #ffffff;
+    fill:  #ffffff;
+}
+
+
+/**********************************************************************
  border-bottom
 **********************************************************************/
 .border-bottom-1px-inset {
@@ -34,6 +90,18 @@
 }
 .border-bottom-1px-solid {
     border-bottom: 1px solid;
+}
+.border-bottom-2px-solid {
+    border-bottom: 2px solid;
+}
+.border-bottom-3px-solid {
+    border-bottom: 3px solid;
+}
+.border-bottom-4px-solid {
+    border-bottom: 4px solid;
+}
+.border-bottom-5px-solid {
+    border-bottom: 5px solid;
 }
 
 
@@ -56,10 +124,6 @@
 /**********************************************************************
  color
 **********************************************************************/
-.color-add {
-    color: var(--nkw-color-add);
-    fill: var(--nkw-color-add);
-}
 .color-command {
     color: var(--nkw-color-command);
     fill:  var(--nkw-color-command);
@@ -71,10 +135,6 @@
 .color-dark {
     color: var(--nkw-color-dark);
     fill: var(--nkw-color-dark);
-}
-.color-delete {
-    color: var(--nkw-color-delete);
-    fill: var(--nkw-color-delete);
 }
 .color-error {
     color: var(--nkw-color-error);
@@ -155,10 +215,6 @@
 .color-success {
     color: var(--nkw-color-success);
     fill: var(--nkw-color-success);
-}
-.color-update {
-    color: var(--nkw-color-update);
-    fill: var(--nkw-color-update);
 }
 .color-warning {
     color: var(--nkw-color-warning);
@@ -739,6 +795,14 @@
 **********************************************************************/
 .object-fit-contain { object-fit: contain; }
 .object-fit-contain-important { object-fit: contain !important; }
+
+
+/**********************************************************************
+ opacity
+**********************************************************************/
+.opacity-disabled { opacity: 0.3; }
+.opacity-disabled-important { opacity: 0.3 !important; }
+
 
 
 /**********************************************************************
